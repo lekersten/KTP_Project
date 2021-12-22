@@ -20,10 +20,7 @@ class PrologQueryFactory:
         Adds a parameter to the query.
         :param query_parameter: The Parameter to Add to the Query
         """
-        if len(self.query) == 0:
-            self.query.append(f'{query_parameter}(X)')
-        else:
-            self.query.append(f'{query_parameter}(X)')
+        self.query.append(f'{query_parameter}(X)')
 
     def remove_last_parameter(self):
         """

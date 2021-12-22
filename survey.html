@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1 id="title">Catering Menu Inquiry</h1>
+            <p id="description">This is a simple survey to help with deciding the menu for an event.</p>
+        </header>
+        <form id="survey-form" action="get_together.html">
+
+            <div class="form-group">
+                <label for="question">What kind of event are you hosting?</label>
+                <select name="question" id="event_type">
+                    <option value="get_together">Casual Get Together</option>
+                    <option value="fancy">Fancy Event</option>
+                    <option value="party">Party</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="question">What season will the event be held in?</label>
+                <select name="question" id="season">
+                    <option value="winter">Winter</option>
+                    <option value="summer">Spring</option>
+                    <option value="winter">Fall</option>
+                    <option value="summer">Summer</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Where will the event be held?</label>
+                <div class="radio-group">
+                    <input type="radio" name="location" id="Indoors" value="indoor"><label for="Indoors"> Indoors </label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="location" id="Outdoors" value="outdoor"><label for="Outdoors"> Outdoors </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="question">When will the event be held?</label>
+                <select name="question" id="time">
+                    <option value="lunch">12:00 - 18:00</option>
+                    <option value="dinner">18:00 - 22:00</option>
+                    <option value="night">22:00 - 03:00</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="children">Will there be children present?</label>
+                <div class="radio-group">
+                    <input type="radio" name="children" id="children" value="children"><label for="children">Yes</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="children" id="no children" value="no children"><label for="no children">No</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="question">Should the menu be vegan or vegeterian friendly?</label>
+                <select name="question" id="vegan">
+                    <option value="vegan">Vegan</option>
+                    <option value="vegeterian">Vegeterian</option>
+                    <option value="none">None of the above</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="question_nuts">Does anyone have a nut allergy?</label>
+                <div class="radio-group">
+                    <input type="radio" name="nuts" id="nuts" value="nuts"><label for="nuts">Yes</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="nuts" id="no nuts" value="no nut allergy"><label for="no nuts">No</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="question">Does anyone have a dairy allergy?</label>
+                <div class="radio-group">
+                    <input type="radio" name="dairy" id="dairy" value="dairy"><label for="dairy">Yes</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="dairy" id="no dairy" value="no dairy allergy"><label for="no dairy">No</label>
+                </div>
+            </div>
+            
+
+            <div class="form-group">
+                <label for="question">Is there a certain cuisine you would like to focus on?</label>
+                <select name="question" id="cuisine">
+                    <option value="american">Eclectic American</option>
+                    <option value="mexican">Mexican</option>
+                    <option value="italian">Italian</option>
+                    <option value="asian">Asian</option>
+                    <option value="spanish">Spanish</option>
+                    <option value="none">None of the above</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <button id="submit" onclick="submitForm()">Submit</button>
+                <script src="survey_script.js"></script>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>
