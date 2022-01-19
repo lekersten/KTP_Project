@@ -19,3 +19,5 @@ In the root directory of the repository, run:
 ```
 python -m uvicorn main:app --reload
 ```
+
+And then use your preferred browser to open survey.html
