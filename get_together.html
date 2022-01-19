@@ -12,16 +12,18 @@
         <header>
             <h1 id="title">Results of Your Survey</h1>
             <p id="description">Click on the items below to get the results for your menu.</p>
+            <p id="description">(Open and close the subsections for a different suggestion!)</p>
         </header>
         <form id="survey-form" action="survey.html">
             <div class="form-group">
-                <details>
+                <details onclick="get_main_dish()">
                     <summary>Main Dish</summary>
                     <p id ="main_dish">Main Dish</p>
                 </details>
+                <script src="results_script.js"></script>
             </div>
             <div class="form-group">
-                <details>
+                <details onclick="get_drink()">
                     <summary>Drink</summary>
                     <p id = "drink">Drink</p>
                 </details>

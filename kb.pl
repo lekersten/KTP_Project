@@ -11,13 +11,30 @@ main_dish(pizza).
 main_dish(tapas).
 main_dish(turkey).
 main_dish(chicken).
+main_dish(enchilladas).
+main_dish(ramen).
+main_dish(sushi).
+main_dish(fondue).
+main_dish(döner).
+main_dish(pad-thai).
+main_dish(fried-rice).
+main_dish(schnitzel).
+main_dish(currywurst).
+main_dish(matjes).
+main_dish(buffet).
+main_dish(savory-crepes).
 
 drink(wine).
 drink(beer).
 drink(soda).
 drink(juice).
 drink(cocktails).
+drink(margarita).
 drink(whiskey).
+drink(mango-lassi).
+drink(glühwein).
+drink(champagne).
+drink(mimosas).
 
 appetizers(loempia).
 appetizers(meatballs).
@@ -25,6 +42,13 @@ appetizers(bitterballen).
 appetizers(bruschetta).
 appetizers(dumplings).
 appetizers(arancini).
+appetizers(salad).
+appetizers(soup).
+appetizers(cheese-fondue).
+appetizers(papadam).
+appetizers(carpaccio).
+appetizers(escargot).
+appetizers(charcuterie).
 
 dessert(tiramisu).
 dessert(brownies).
@@ -32,17 +56,28 @@ dessert(baklava).
 dessert(cheesecake).
 dessert(cupcakes).
 dessert(pudding).
+dessert(ice-cream).
+dessert(pie).
+dessert(gulab-jamun).
+dessert(chocolate-fondue).
+dessert(rote-grütze).
+dessert(sweet-crepes).
 
 snacks(chips).
 snacks(crackers).
 snacks(peanuts).
 snacks(nutsmix).
 snacks(popcorn).
+snacks(fries).
+snacks(takoyaki).
+snacks(naan).
+snacks(borek).
+snacks(samosas).
 
-
-
-% Event type relations
+% Event type relations - fancy, party, or get_together
 get_together(tacos).
+party(tacos).
+get_together(enchilladas).
 get_together(burger).
 get_together(risotto).
 get_together(curry).
@@ -53,6 +88,17 @@ fancy(lasagna).
 fancy(turkey).
 party(pizza).
 party(tapas).
+get_together(ramen).
+fancy(sushi).
+fancy(fondue).
+get_together(döner).
+get_together(pad-thai).
+party(stir-fry).
+get_together(schnitzel).
+party(currywurst).
+fancy(matjes).
+party(buffet).
+fancy(savory-crepes).
 %
 fancy(wine).
 party(wine).
@@ -65,6 +111,16 @@ get_together(juice).
 fancy(cocktails).
 party(cocktails).
 fancy(whiskey).
+party(margarita).
+fancy(margarita).
+get_together(margarita).
+get_together(mango-lassi).
+get_together(glühwein).
+party(glühwein).
+fancy(champagne).
+party(champagne).
+fancy(mimosas).
+get_together(mimosas).
 %
 fancy(loempia).
 fancy(meatballs).
@@ -72,6 +128,13 @@ fancy(bitterballen).
 fancy(bruschetta).
 fancy(dumplings).
 fancy(arancini).
+fancy(salad).
+fancy(soup).
+fancy(cheese-fondue).
+fancy(papadam).
+fancy(carpaccio).
+fancy(escargot).
+fancy(charcuterie).
 %
 fancy(tiramisu).
 fancy(brownies).
@@ -79,12 +142,27 @@ fancy(baklava).
 fancy(cheesecake).
 fancy(cupcakes).
 fancy(pudding).
+fancy(ice-cream).
+fancy(pie).
+fancy(gulab-jamun).
+fancy(chocolate-fondue).
+fancy(rote-grütze).
+fancy(sweet-crepes).
 %
 party(chips).
 party(crackers).
 party(peanuts).
 party(nutsmix).
 party(popcorn).
+party(fries).
+get_together(fries).
+fancy(takoyaki).
+get_together(takoyaki).
+fancy(naan).
+get_together(naan).
+party(borek).
+fancy(samosas).
+get_together(samosas).
 
 
 % Season relations (winter includes fall, summer includes spring)
@@ -93,6 +171,7 @@ summer(X) :- both_seasons(X).
 
 both_seasons(tacos).
 both_seasons(burger).
+winter(enchilladas).
 winter(risotto).
 winter(curry).
 both_seasons(chicken).
@@ -102,6 +181,17 @@ winter(lasagna).
 winter(turkey).
 both_seasons(pizza).
 summer(tapas).
+winter(ramen).
+summer(sushi).
+winter(fondue).
+both_seasons(döner).
+both_seasons(pad-thai).
+both_seasons(fried-rice).
+both_seasons(schnitzel).
+both_seasons(currywurst).
+summer(matjes).
+both_seasons(buffet).
+both_seasons(savory-crepes).
 %
 both_seasons(wine).
 both_seasons(beer).
@@ -109,6 +199,11 @@ both_seasons(soda).
 both_seasons(juice).
 both_seasons(cocktails).
 both_seasons(whiskey).
+margarita(margarita).
+both_seasons(mango-lassi).
+winter(glühwein).
+both_seasons(champagne).
+both_seasons(mimosas).
 %
 both_seasons(loempia).
 both_seasons(meatballs).
@@ -116,6 +211,13 @@ both_seasons(bitterballen).
 both_seasons(bruschetta).
 both_seasons(dumplings).
 both_seasons(arancini).
+summer(salad).
+winter(soup).
+winter(cheese-fondue).
+both_seasons(papadam).
+summer(carpaccio).
+summer(escargot).
+both_seasons(charcuterie).
 %
 both_seasons(tiramisu).
 winter(brownies).
@@ -123,12 +225,23 @@ both_seasons(baklava).
 summer(cheesecake).
 both_seasons(cupcakes).
 both_seasons(pudding).
+summer(ice-cream).
+winter(pie).
+both_seasons(gulab-jamun).
+winter(chocolate-fondue).
+both_seasons(rote-grütze).
+both_seasons(savory-crepes).
 %
 both_seasons(chips).
 both_seasons(crackers).
 both_seasons(peanuts).
 both_seasons(nutsmix).
 both_seasons(popcorn).
+both_seasons(fries).
+both_seasons(takoyaki).
+winter(naan).
+both_seasons(borek).
+winter(samosas).
 
 % Where relation
 outdoor(X) :- anywhere(X).
@@ -145,6 +258,18 @@ indoor(lasagna).
 indoor(turkey).
 anywhere(pizza).
 anywhere(tapas).
+indoor(enchilladas).
+indoor(ramen).
+anywhere(sushi).
+indoor(fondue).
+anywhere(döner).
+indoor(pad-thai).
+anywhere(fried-rice).
+indoor(schnitzel).
+anywhere(currywurst).
+anywhere(matjes).
+anywhere(buffet).
+indoor(savory-crepes).
 %
 anywhere(wine).
 anywhere(beer).
@@ -152,6 +277,11 @@ anywhere(soda).
 anywhere(juice).
 anywhere(cocktails).
 anywhere(whiskey).
+anywhere(margarita).
+anywhere(mango-lassi).
+anywhere(glühwein).
+anywhere(champagne).
+anywhere(mimosas).
 %
 anywhere(loempia).
 anywhere(meatballs).
@@ -159,6 +289,14 @@ anywhere(bitterballen).
 anywhere(bruschetta).
 anywhere(dumplings).
 anywhere(arancini).
+anywhere(salad).
+anywhere(soup).
+indoor(cheese-fondue).
+anywhere(papadam).
+anywhere(carpaccio).
+anywhere(escargot).
+anywhere(charcuterie).
+
 %
 anywhere(tiramisu).
 anywhere(brownies).
@@ -166,12 +304,23 @@ anywhere(baklava).
 anywhere(cheesecake).
 anywhere(cupcakes).
 anywhere(pudding).
+anywhere(ice-cream).
+anywhere(pie).
+anywhere(gulab-jamun).
+anywhere(chocolate-fondue).
+anywhere(rote-grütze).
+anywhere(sweet-crepes).
 %
 anywhere(chips).
 anywhere(crackers).
 anywhere(peanuts).
 anywhere(nutsmix).
 anywhere(popcorn).
+anywhere(fries).
+anywhere(takoyaki).
+anywhere(naan).
+anywhere(borek).
+anywhere(samosas).
 
 % Time (lunch-dinner-night)
 lunch(X)  :- all_meals(X).
@@ -192,6 +341,18 @@ dinner(lasagna).
 dinner(turkey).
 all_meals(pizza).
 dinner(tapas).
+dinner(enchilladas).
+all_meals(ramen).
+all_meals(sushi).
+dinner(fondue).
+lunch(döner).
+all_meals(pad-thai).
+all_meals(fried-rice).
+dinner(schnitzel).
+lunch(currywurst).
+dinner(matjes).
+all_meals(buffet).
+dinner(savory-crepes).
 %
 dinner(wine).
 night(wine).
@@ -201,6 +362,13 @@ all_meals(juice).
 night(cocktails).
 dinner(whiskey).
 night(whiskey).
+dinner(margarita).
+night(margarita).
+lunch(mango-lassi).
+dinner(mango-lassi).
+dinner(glühwein).
+all_meals(champagne).
+lunch(mimosas).
 %
 lunch(loempia).
 lunch(meatballs).
@@ -212,6 +380,15 @@ dinner(bruschetta).
 lunch(dumplings).
 dinner(dumplings).
 lunch(arancini).
+lunch(salad).
+dinner(salad).
+dinner(soup).
+dinner(cheese-fondue).
+lunch(papadam).
+dinner(papadam).
+dinner(carpaccio).
+dinner(escargot).
+all_meals(charcuterie).
 %
 all_meals(tiramisu).
 all_meals(brownies).
@@ -219,12 +396,23 @@ all_meals(baklava).
 all_meals(cheesecake).
 all_meals(cupcakes).
 all_meals(pudding).
+all_meals(ice-cream).
+all_meals(pie).
+all_meals(gulab-jamun).
+all_meals(chocolate-fondue).
+all_meals(rote-grütze).
+all_meals(sweet-crepes).
 %
 all_meals(chips).
 all_meals(crackers).
 all_meals(peanuts).
 all_meals(nutsmix).
 all_meals(popcorn).
+all_meals(fries).
+all_meals(takoyaki).
+all_meals(naan).
+all_meals(borek).
+all_meals(samosas).
 
 % Children existence relations
 children(tacos).
@@ -246,11 +434,27 @@ children(crackers).
 children(peanuts).
 children(nutsmix).
 children(popcorn).
+children(enchilladas).
+children(döner).
+children(pad-thai).
+children(fried-rice).
+children(schnitzel).
+children(currywurst).
+children(buffet).
+children(ice-cream).
+children(pie).
+children(chocolate-fondue).
+children(rote-grütze).
+children(fries).
+children(naan).
+children(borek).
+children(savory-crepes).
+children(sweet-crepes).
 
 % Vegan / Vegetarian / Dairy-free / nut allergy / none
 vegan(X)      :- drink(X).
 vegetarian(X) :- drink(X).
-dairy(X)      :- drink(X).
+dairy(X)      :- drink(X), dif(X, mango-lassi).
 dairy(X)      :- snacks(X).
 dairy(X)      :- appetizers(X).
 nuts(X)       :- drink(X).
@@ -292,6 +496,22 @@ vegetarian(pizza).
 nuts(pizza).
 none(tapas).
 dairy(baklava).
+dairy(ramen).
+dairy(sushi).
+dairy(fondue).
+nuts(döner).
+dairy(pad-thai).
+dairy(fried-rice).
+nuts(fried-rice).
+nuts(schnitzel).
+dairy(currywurst).
+nuts(currywurst).
+nuts(matjes).
+vegetarian(savory-crepes).
+nuts(savory-crepes).
+vegetarian(sweet-crepes).
+nuts(sweet-crepes).
+
 
 % Cuisine
 mexican(X)  :- any_cuisine(X).
@@ -299,11 +519,16 @@ american(X) :- any_cuisine(X).
 italian(X)  :- any_cuisine(X).
 asian(X)    :- any_cuisine(X).
 spanish(X)  :- any_cuisine(X).
-
+german(X)  :- any_cuisine(X).
+turkish(X)  :- any_cuisine(X).
+indian(X)  :- any_cuisine(X).
+japanese(X)  :- any_cuisine(X).
+french(X) :- any_cuisine(X).
 
 mexican(tacos).
 american(burger).
 italian(risotto).
+indian(curry).
 asian(curry).
 any_cuisine(chicken).
 any_cuisine(lobster).
@@ -312,6 +537,18 @@ italian(lasagna).
 any_cuisine(turkey).
 italian(pizza).
 spanish(tapas).
+mexican(enchilladas).
+japanese(ramen).
+japanese(sushi).
+any_cuisine(fondue).
+turkish(döner).
+asian(pad-thai).
+asian(fried-rice).
+german(schnitzel).
+german(currywurst).
+german(matjes).
+any_cuisine(buffet).
+french(savory-crepes).
 %
 any_cuisine(wine).
 any_cuisine(beer).
@@ -319,6 +556,11 @@ any_cuisine(soda).
 any_cuisine(juice).
 any_cuisine(cocktails).
 any_cuisine(whiskey).
+mexican(margarita).
+indian(mango-lassi).
+german(glühwein).
+any_cuisine(champagne).
+any_cuisine(mimosas).
 %
 asian(loempia).
 italian(meatballs).
@@ -326,6 +568,13 @@ dutch(bitterballen).
 italian(bruschetta).
 asian(dumplings).
 italian(arancini).
+any_cuisine(salad).
+any_cuisine(soup).
+any_cuisine(cheese-fondue).
+indian(papadam).
+italian(carpaccio).
+french(escargot).
+french(charcuterie).
 %
 italian(tiramisu).
 american(brownies).
@@ -333,9 +582,20 @@ asian(baklava).
 any_cuisine(cheesecake).
 any_cuisine(cupcakes).
 any_cuisine(pudding).
+any_cuisine(ice-cream).
+any_cuisine(pie).
+indian(gulab-jamun).
+any_cuisine(chocolate-fondue).
+german(rote-grütze).
+french(savory-crepes).
 %
 any_cuisine(chips).
 any_cuisine(crackers).
 any_cuisine(peanuts).
 any_cuisine(nutsmix).
 any_cuisine(popcorn).
+any_cuisine(fries).
+japanese(takoyaki).
+indian(naan).
+turkish(borek).
+indian(samosas).
