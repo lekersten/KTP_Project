@@ -23,6 +23,7 @@ main_dish(currywurst).
 main_dish(matjes).
 main_dish(buffet).
 main_dish(savory-crepes).
+main_dish(spaghetti-bolognese).
 
 drink(wine).
 drink(beer).
@@ -35,6 +36,7 @@ drink(mango-lassi).
 drink(glühwein).
 drink(champagne).
 drink(mimosas).
+drink(sake).
 
 appetizers(loempia).
 appetizers(meatballs).
@@ -49,6 +51,7 @@ appetizers(papadam).
 appetizers(carpaccio).
 appetizers(escargot).
 appetizers(charcuterie).
+appetizers(nachos).
 
 dessert(tiramisu).
 dessert(brownies).
@@ -73,6 +76,7 @@ snacks(takoyaki).
 snacks(naan).
 snacks(borek).
 snacks(samosas).
+snacks(nachos).
 
 % Event type relations - fancy, party, or get_together
 get_together(tacos).
@@ -99,6 +103,7 @@ party(currywurst).
 fancy(matjes).
 party(buffet).
 fancy(savory-crepes).
+get_together(spaghetti-bolognese).
 %
 fancy(wine).
 party(wine).
@@ -121,6 +126,9 @@ fancy(champagne).
 party(champagne).
 fancy(mimosas).
 get_together(mimosas).
+get_together(sake).
+party(sake).
+fancy(sake).
 %
 fancy(loempia).
 fancy(meatballs).
@@ -163,6 +171,8 @@ get_together(naan).
 party(borek).
 fancy(samosas).
 get_together(samosas).
+get_together(nachos).
+party(nachos).
 
 
 % Season relations (winter includes fall, summer includes spring)
@@ -192,6 +202,7 @@ both_seasons(currywurst).
 summer(matjes).
 both_seasons(buffet).
 both_seasons(savory-crepes).
+both_seasons(spaghetti-bolognese).
 %
 both_seasons(wine).
 both_seasons(beer).
@@ -204,6 +215,7 @@ both_seasons(mango-lassi).
 winter(glühwein).
 both_seasons(champagne).
 both_seasons(mimosas).
+both_seasons(sake).
 %
 both_seasons(loempia).
 both_seasons(meatballs).
@@ -216,8 +228,9 @@ winter(soup).
 winter(cheese-fondue).
 both_seasons(papadam).
 summer(carpaccio).
-summer(escargot).
+both_seasons(escargot).
 both_seasons(charcuterie).
+both_seasons(nachos).
 %
 both_seasons(tiramisu).
 winter(brownies).
@@ -270,6 +283,7 @@ anywhere(currywurst).
 anywhere(matjes).
 anywhere(buffet).
 indoor(savory-crepes).
+anywhere(spaghetti-bolognese).
 %
 anywhere(wine).
 anywhere(beer).
@@ -282,6 +296,7 @@ anywhere(mango-lassi).
 anywhere(glühwein).
 anywhere(champagne).
 anywhere(mimosas).
+anywhere(sake).
 %
 anywhere(loempia).
 anywhere(meatballs).
@@ -296,7 +311,7 @@ anywhere(papadam).
 anywhere(carpaccio).
 anywhere(escargot).
 anywhere(charcuterie).
-
+anywhere(nachos).
 %
 anywhere(tiramisu).
 anywhere(brownies).
@@ -353,6 +368,8 @@ lunch(currywurst).
 dinner(matjes).
 all_meals(buffet).
 dinner(savory-crepes).
+lunch(spaghetti-bolognese).
+dinner(spaghetti-bolognese).
 %
 dinner(wine).
 night(wine).
@@ -369,6 +386,8 @@ dinner(mango-lassi).
 dinner(glühwein).
 all_meals(champagne).
 lunch(mimosas).
+dinner(sake).
+night(sake).
 %
 lunch(loempia).
 lunch(meatballs).
@@ -389,6 +408,7 @@ dinner(papadam).
 dinner(carpaccio).
 dinner(escargot).
 all_meals(charcuterie).
+all_meals(nachos).
 %
 all_meals(tiramisu).
 all_meals(brownies).
@@ -450,6 +470,8 @@ children(naan).
 children(borek).
 children(savory-crepes).
 children(sweet-crepes).
+children(nachos).
+children(spaghetti-bolognese).
 
 % Vegan / Vegetarian / Dairy-free / nut allergy / none
 vegan(X)      :- drink(X).
@@ -511,6 +533,9 @@ vegetarian(savory-crepes).
 nuts(savory-crepes).
 vegetarian(sweet-crepes).
 nuts(sweet-crepes).
+vegetarian(nachos).
+dairy(spaghetti-bolognese).
+nuts(spaghetti-bolognese).
 
 
 % Cuisine
@@ -549,6 +574,7 @@ german(currywurst).
 german(matjes).
 any_cuisine(buffet).
 french(savory-crepes).
+italian(spaghetti-bolognese).
 %
 any_cuisine(wine).
 any_cuisine(beer).
@@ -561,6 +587,7 @@ indian(mango-lassi).
 german(glühwein).
 any_cuisine(champagne).
 any_cuisine(mimosas).
+japanese(sake).
 %
 asian(loempia).
 italian(meatballs).
@@ -575,6 +602,7 @@ indian(papadam).
 italian(carpaccio).
 french(escargot).
 french(charcuterie).
+mexican(nachos).
 %
 italian(tiramisu).
 american(brownies).
