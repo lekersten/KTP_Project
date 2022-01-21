@@ -6,18 +6,19 @@ import json
 # Initialize global singletons
 app = FastAPI()
 origins = [
+    "http://localhost",
     "http://127.0.0.1:5500",
     "http://127.0.0.1:8000",
     "http://127.0.0.1:8080",
-    "http://127.0.0.1:8008"
+    "http://127.0.0.1:8008",
     ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
-    allow_methods=[""],
-    allow_headers=[""],
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 prolog_main = PrologUtil('kb.pl')
