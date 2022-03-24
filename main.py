@@ -43,3 +43,11 @@ async def get_results():
 async def undo_add_predicate():
     prolog_main.undo_add_predicate()
     return {"Undo Successful, Results": json.dumps(prolog_main.get_current_results())}
+
+@app.get("/app/query/vegan")
+async def get_vegan_status():
+    return {"Vegan": prolog_main.get_vegan()}
+
+@app.get("/app/query/vegetarian")
+async def get_vegetarian_status():
+    return {"Vegetarian": prolog_main.get_vegetarian()}

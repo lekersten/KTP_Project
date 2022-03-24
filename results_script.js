@@ -1,6 +1,8 @@
 // Retrieves the main dish and changes the respective element
 function get_main_dish() {
-    get_menu_item("main_dish");
+    const vegan = get_vegan();
+    const vegetarian = get_vegetarian();
+    get_menu_item("main_dish", vegan, vegetarian);
 }
 
 // Retrieves the drink and changes the respective element
@@ -29,7 +31,7 @@ function reload_results_page() {
 }
 
 // Gets the desired menu item
-function get_menu_item(item_str) {
+function get_menu_item(item_str, vegan = false, vegetarian = false) {
     // Feth the data
     const data = fetch_results(item_str);
 
@@ -39,9 +41,21 @@ function get_menu_item(item_str) {
     // Select item
     const selected_item = select_item(parsed_data);
 
-    // Change the HTML
-    document.getElementById(item_str).innerHTML = selected_item;
-    document.getElementById(item_str).textContent = selected_item;
+    // Check if vegan
+    if (vegan) {
+        const checked_item = "Vegan " + selected_item;
+        // Change the HTML
+        document.getElementById(item_str).innerHTML = checked_item;
+        document.getElementById(item_str).textContent = checked_item;
+    } else if (vegetarian) {
+        const checked_vegetarian = "Vegetarian " + selected_item;
+        // Change the HTML
+        document.getElementById(item_str).innerHTML = checked_vegetarian;
+        document.getElementById(item_str).textContent = checked_vegetarian;
+    } else {
+        document.getElementById(item_str).innerHTML = selected_item;
+        document.getElementById(item_str).textContent = selected_item;
+    }
 
     // Undo the added item
     undo_item_selection();
@@ -83,5 +97,31 @@ function undo_item_selection() {
     const url='http://127.0.0.1:8000/app/query/undo_add';
     Http.open("GET", url);
     Http.send();
+}
+
+// Returns if the food should be vegan or not
+function get_vegan() {
+    const url = 'http://127.0.0.1:8000/app/query/vegan';
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url, false ); // false for synchronous request
+    xmlHttp.send( null );
+    const data =  xmlHttp.responseText;
+    const parsedData = JSON.parse(data);
+    const vegan = JSON.parse(parsedData["Vegan"]);
+
+    return vegan;
+}
+
+// Returns if the food should be vegertarian or not
+function get_vegetarian() {
+    const url = 'http://127.0.0.1:8000/app/query/vegetarian';
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url, false ); // false for synchronous request
+    xmlHttp.send( null );
+    const data =  xmlHttp.responseText;
+    const parsedData = JSON.parse(data);
+    const vegetarian = JSON.parse(parsedData["Vegetarian"]);
+
+    return vegetarian;
 }
 

@@ -49,6 +49,8 @@ class PrologUtil:
         self.kb_name: str = kb_name
         self.prolog: Prolog = Prolog()
         self.q_factory: PrologQueryFactory = PrologQueryFactory()
+        self.vegan: bool = False
+        self.vegetarian: bool = False
         self.connect()
 
     def connect(self):
@@ -72,6 +74,11 @@ class PrologUtil:
         :param predicate: The Predicate to be added
         """
         self.q_factory.add_parameter(predicate)
+        
+        if (predicate.lower() == "vegan"):
+            self.vegan = True
+        elif (predicate.lower() == "vegeterian"):
+            self.vegetarian = True
 
     def undo_add_predicate(self):
         """
@@ -94,3 +101,17 @@ class PrologUtil:
             result.append(result_dict)
 
         return result
+
+    def get_vegan(self):
+        """
+        Returns True if there's a vegan requirement
+        :return: Whether the meals should be vegan or not
+        """
+        return self.vegan
+
+    def get_vegetarian(self):
+        """
+        Returns True if there's a vegetarian requirement
+        :return: Whether the meals should be vegetarian or not
+        """
+        return self.vegetarian
