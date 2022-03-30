@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from prolog_util import PrologUtil
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import RedirectResponse
+from backend.prolog_util import PrologUtil
 import json
 
 # Initialize global singletons
@@ -14,12 +16,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-prolog_main = PrologUtil('kb.pl')
+app.mount("/frontend", StaticFiles(directory="frontend"), name="frontend")
+prolog_main = PrologUtil('backend/db/kb.pl')
 
 
 @app.get("/")
 async def root():
-    return {"Does the App Work?" : "Yes"}
+    return RedirectResponse("http://127.0.0.1:8000/frontend/survey.html")
 
 
 @app.get("/app/query/start")
