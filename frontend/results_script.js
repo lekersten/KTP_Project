@@ -1,3 +1,4 @@
+
 // Retrieves the main dish and changes the respective element
 function get_main_dish() {
     const vegan = get_vegan();
@@ -52,6 +53,13 @@ function get_menu_item(item_str, vegan = false, vegetarian = false) {
         // Change the HTML
         document.getElementById(item_str).innerHTML = checked_vegetarian;
         document.getElementById(item_str).textContent = checked_vegetarian;
+    } else if (selected_item == "buffet") {
+        const path = window.location.pathname;
+        const page = path.split("/").pop();
+        const modifiedPage = page.substring(0, page.indexOf(".html"));
+        const buffet = get_buffet_choices(modifiedPage);
+        document.getElementById(item_str).innerHTML = buffet;
+        document.getElementById(item_str).textContent = buffet;
     } else {
         document.getElementById(item_str).innerHTML = selected_item;
         document.getElementById(item_str).textContent = selected_item;
@@ -59,6 +67,19 @@ function get_menu_item(item_str, vegan = false, vegetarian = false) {
 
     // Undo the added item
     undo_item_selection();
+}
+
+function get_buffet_choices(buffet) {
+    switch (buffet) {
+        case "get_together":
+            return "A Buffet Including: Meatballs, Sausages, Chicken Wings, Fries, Salad";
+        case "party":
+            return "A Buffet Including: Chips and Dip, Cookies, Bitterballen, Hamburgers, Pizza, Carrots and Hummus";
+        case "fancy":
+            return "A Buffet Including: Shrimp Cocktail, Oysters, Soup, Roasted Duck and Vegetables, Sushi";
+        default:
+            return "As  the user, you should not be able to see this. If you are, either you or I did something very wrong."
+    }
 }
 
 // Randomly selects an item from the parsed results array

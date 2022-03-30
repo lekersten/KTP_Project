@@ -1,14 +1,15 @@
 function submitForm() {
+    resetQuery();
     // Process choices
     process_event_type();
     process_season();
     process_location();
     process_time();
     process_children();
-    process_vegan_vegeterian();
     process_nuts();
     process_dairy();
     process_cuisine();
+    process_vegan_vegeterian();
 }
 
 // Changes the results format depending on event type
@@ -48,7 +49,7 @@ function process_children() {
 function process_vegan_vegeterian() {
     const vegan_vegetarian = document.getElementById("vegan").value;
 
-    if (vegan_vegetarian != "none") {
+    if ((vegan_vegetarian == "vegan") || (vegan_vegetarian == "vegetarian")) {
         add_query_parameter(vegan_vegetarian);
     }
 }
@@ -86,4 +87,23 @@ function add_query_parameter(parameter) {
     const url='http://127.0.0.1:8000/app/query/add/' + parameter;
     Http.open("GET", url);
     Http.send();
+}
+
+function resetQuery() {
+    const Http = new XMLHttpRequest();
+    const url='http://127.0.0.1:8000/app/query/start';
+    Http.open("GET", url);
+    Http.send();
+}
+
+function getVeganFromServer() {
+    const url = 'http://127.0.0.1:8000/app/query/vegan';
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url, false ); // false for synchronous request
+    xmlHttp.send( null );
+    const data =  xmlHttp.responseText;
+    const parsedData = JSON.parse(data);
+    const vegan = JSON.parse(parsedData["Vegan"]);
+
+    return vegan;
 }

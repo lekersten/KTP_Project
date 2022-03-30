@@ -66,6 +66,8 @@ class PrologUtil:
         Resets the current query list for
         the next iteration.
         """
+        self.vegan = False
+        self.vegetarian = False
         self.q_factory.reset_factory()
 
     def add_predicate(self, predicate: str):
@@ -77,7 +79,7 @@ class PrologUtil:
         
         if (predicate.lower() == "vegan"):
             self.vegan = True
-        elif (predicate.lower() == "vegeterian"):
+        elif (predicate.lower() == "vegetarian"):
             self.vegetarian = True
 
     def undo_add_predicate(self):
