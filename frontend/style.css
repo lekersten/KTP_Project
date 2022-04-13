@@ -6,7 +6,8 @@ body {
     background-color: #eee; 
     background-color: #8fb6c3;
     box-shadow: none;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; */
+    font-family: Gill Sans, sans-serif;
 }
 
 summary {
@@ -24,13 +25,19 @@ main {
 }
 
 header {
+    font-family: Optima, sans-serif;
     text-align: center;
 }
 
 h1 {
+    font-family: Optima, sans-serif;
     font-size: 40px;
     color: #191516;
     font-weight: bold;
+}
+
+h2 {
+    font-family: Optima, sans-serif;
 }
 
 form {

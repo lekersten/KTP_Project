@@ -72,6 +72,11 @@ function get_menu_item(item_str, vegan = false, vegetarian = false) {
     undo_item_selection();
 }
 
+function change_button() {
+    document.getElementById("results").innerHTML = "Refresh Results";
+    document.getElementById("results").textContent = "Refresh Results";
+}
+
 function get_buffet_choices(buffet) {
     switch (buffet) {
         case "get_together":

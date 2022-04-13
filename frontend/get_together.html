@@ -15,26 +15,29 @@
             <p id="description">(Open and close the subsections for a different suggestion!)</p>
         </header>
 
-        <body>At your Get Together, you should serve: </body>
-
-        <p style="text-align:center" font; font-size:40px>Entree</p>
-
         <form id="survey-form" action="survey.html">
             <div class="form-group">
-                <h2>Main Dish</h2>
-                <p id ="main_dish" onload="get_main_dish()">The main dish you should serve:</p>
-                <script src="results_script.js">get_main_dish()</script>
+                <p font-size: 40px;>At your Get Together, you should serve: </p>
+
+                <h2 style="text-align: center;">Entrée</h2>
+                <p >The main dish you should serve:</p>
+                <p id ="main_dish" onload="get_main_dish()">X</p>
+
+                <h2 style="text-align: center;">Beverage</h2>
+                <p>Pair your meal with the following refreshment:</p>
+                <p id ="drink" onload="get_drink()">X</p>
+
             </div>
 
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <details onclick="get_drink()">
                     <summary>Drink</summary>
                     <p id = "drink">Drink</p>
                 </details>
-            </div>
+            </div> -->
 
             <div class="form-group">
-                <button id="submit" style = "background-color: rgb(99, 125, 125);" type="button" onclick="get_main_dish();get_drink()">Refresh Results</button>
+                <button id="results" style = "background-color: rgb(99, 125, 125);" type="button" onclick="get_main_dish();get_drink();change_button()">See Results</button>
                 <script src="results_script.js"></script>
             </div>
 
