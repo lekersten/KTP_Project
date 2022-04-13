@@ -11,8 +11,7 @@
     <main>
         <header>
             <h1 id="title">Your Menu</h1>
-            <p id="description">Click on the items below to get the results for your menu.</p>
-            <p id="description">(Open and close the subsections for a different suggestion!)</p>
+            <p id="description">Click below to reveal your personalized menu from your survey results.</p>
         </header>
 
         <form id="survey-form" action="survey.html">
@@ -21,20 +20,13 @@
 
                 <h2 style="text-align: center;">Entrée</h2>
                 <p >The main dish you should serve:</p>
-                <p id ="main_dish" onload="get_main_dish()">X</p>
+                <p id ="main_dish">X</p>
 
                 <h2 style="text-align: center;">Beverage</h2>
                 <p>Pair your meal with the following refreshment:</p>
-                <p id ="drink" onload="get_drink()">X</p>
+                <p id ="drink">X</p>
 
             </div>
-
-            <!-- <div class="form-group">
-                <details onclick="get_drink()">
-                    <summary>Drink</summary>
-                    <p id = "drink">Drink</p>
-                </details>
-            </div> -->
 
             <div class="form-group">
                 <button id="results" style = "background-color: rgb(99, 125, 125);" type="button" onclick="get_main_dish();get_drink();change_button()">See Results</button>
@@ -42,7 +34,7 @@
             </div>
 
             <div class="form-group">
-                <button id="submit" onclick="resetQuery()">Redo Survey</button>
+                <button id="submit" style = "background-color: rgb(42, 53, 53);" onclick="resetQuery()">Redo Survey</button>
                 <script>
                     function resetQuery() {
                         const Http = new XMLHttpRequest();

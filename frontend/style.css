@@ -4,7 +4,8 @@ body {
     border: none;
     outline: none;
     background-color: #eee; 
-    background-color: #8fb6c3;
+    /* background-color: #8fb6c3; */
+    background-color: #33558c;
     box-shadow: none;
     /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; */
     font-family: Gill Sans, sans-serif;
@@ -38,6 +39,10 @@ h1 {
 
 h2 {
     font-family: Optima, sans-serif;
+}
+
+p {
+    style="text-align: center;
 }
 
 form {
