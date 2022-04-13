@@ -10,32 +10,35 @@
 <body>
     <main>
         <header>
-            <h1 id="title">Results of Your Survey</h1>
-            <p id="description">Click on the items below to get the results for your menu.</p>
-            <p id="description">(Open and close the subsections for a different suggestion!)</p>
+            <h1 id="title">The Menu</h1>
+            <p id="description">Click below to reveal your personalized menu from your survey results.</p>
         </header>
+
         <form id="survey-form" action="survey.html">
             <div class="form-group">
-                <details onclick="get_snack()">
-                    <summary>Snack</summary>
-                    <p id ="snacks">Snack</p>
-                </details>
+                <p font-size: 30px;>At your Party, you should serve: </p>
+
+                <h2 style="text-align: center;">Snack</h2>
+                <p>A starter for you to serve at your party:</p>
+                <p id ="snacks">X</p>
+
+                <h2 style="text-align: center;">Entrée</h2>
+                <p >The main dish you should serve:</p>
+                <p id ="main_dish">X</p>
+
+                <h2 style="text-align: center;">Beverage</h2>
+                <p>Pair your meal with the following refreshment:</p>
+                <p id ="drink">X</p>
+
             </div>
-            <script src="results_script.js"></script>
+
             <div class="form-group">
-                <details onclick="get_main_dish()">
-                    <summary>Main Dish</summary>
-                    <p id ="main_dish">Main Dish</p>
-                </details>
+                <button id="results" style = "background-color: rgb(99, 125, 125);" type="button" onclick="get_snack();get_main_dish();get_drink();change_button()">See Results</button>
+                <script src="results_script.js"></script>
             </div>
+
             <div class="form-group">
-                <details onclick="get_drink()">
-                    <summary>Drink</summary>
-                    <p id = "drink">Drink</p>
-                </details>
-            </div>
-            <div class="form-group">
-                <button id="submit" onclick="resetQuery()">Redo Survey</button>
+                <button id="submit" style = "background-color: rgb(42, 53, 53);" onclick="resetQuery()">Redo Survey</button>
                 <script>
                     function resetQuery() {
                         const Http = new XMLHttpRequest();
@@ -46,6 +49,7 @@
                 </script>
             </div>
         </form>
+
     </main>
 </body>
 
