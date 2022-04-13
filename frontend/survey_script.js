@@ -76,6 +76,19 @@ function process_dairy() {
 function process_cuisine() {
     const cuisine = document.getElementById("cuisine").value;
 
+    if (cuisine == "none") {
+        const cuisines = [
+            "italian", "american", "mexican", 
+            "spanish", "indian", "japanese", 
+            "asian", "turkish", "french", 
+            "german"
+        ]
+
+        const cuisine_choice = cuisines[Math.floor(Math.random() * cuisines.length)];
+        add_query_parameter(cuisine_choice);
+        return;
+    }
+
     if (cuisine != "none") {
         add_query_parameter(cuisine);
     }

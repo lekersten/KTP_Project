@@ -14,6 +14,11 @@
             <p id="description">Click below to reveal your personalized menu from your survey results.</p>
         </header>
 
+        <div class="form-group">
+            <button id="results" style = "background-color: rgb(99, 125, 125);" type="button" onclick="get_appetizer();get_main_dish();get_drink();get_dessert();change_button()">Reveal Menu</button>
+            <script src="results_script.js"></script>
+        </div>
+
         <form id="survey-form" action="survey.html">
             <div class="form-group">
                 <p font-size: 40px;>Your menu for your Fancy Celebration: </p>
@@ -35,11 +40,6 @@
                 <a id ="dessert" target="_blank" rel="noopener noreferrer">X</a>
             </div>
             <br>
-
-            <div class="form-group">
-                <button id="results" style = "background-color: rgb(99, 125, 125);" type="button" onclick="get_appetizer();get_main_dish();get_drink();get_dessert();change_button()">See Results</button>
-                <script src="results_script.js"></script>
-            </div>
 
             <div class="form-group">
                 <button id="submit" style = "background-color: rgb(42, 53, 53);" onclick="resetQuery()">Redo Survey</button>
