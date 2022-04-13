@@ -51,11 +51,13 @@ function get_menu_item(item_str, vegan = false, vegetarian = false) {
         // Change the HTML
         document.getElementById(item_str).innerHTML = checked_item;
         document.getElementById(item_str).textContent = checked_item;
+        document.getElementById(item_str).href = "https://www.google.com/search?q=" + process_href(checked_item);
     } else if (vegetarian) {
         const checked_vegetarian = "Vegetarian " + selected_item;
         // Change the HTML
         document.getElementById(item_str).innerHTML = checked_vegetarian;
         document.getElementById(item_str).textContent = checked_vegetarian;
+        document.getElementById(item_str).href = "https://www.google.com/search?q=" + process_href(checked_vegetarian);
     } else if (selected_item == "buffet") {
         const path = window.location.pathname;
         const page = path.split("/").pop();
@@ -63,15 +65,23 @@ function get_menu_item(item_str, vegan = false, vegetarian = false) {
         const buffet = get_buffet_choices(modifiedPage);
         document.getElementById(item_str).innerHTML = buffet;
         document.getElementById(item_str).textContent = buffet;
+        document.getElementById(item_str).href = "https://www.google.com/search?q=buffet";
     } else {
         document.getElementById(item_str).innerHTML = selected_item;
         document.getElementById(item_str).textContent = selected_item;
+        document.getElementById(item_str).href = "https://www.google.com/search?q=" + process_href(selected_item);
     }
 
     // Undo the added item
     undo_item_selection();
 }
 
+// Processes the Google search query for href
+function process_href(menu_item) {
+    return menu_item.replace(" ", "+");
+}
+
+// Changes the "See Results/Refresh Results" Button
 function change_button() {
     document.getElementById("results").innerHTML = "Refresh Results";
     document.getElementById("results").textContent = "Refresh Results";
@@ -163,4 +173,3 @@ function capitalizeFirstLetter(string) {
 function process_menu_item(menu_item) {
     return capitalizeFirstLetter(menu_item.replace("_", " "));
 }
-

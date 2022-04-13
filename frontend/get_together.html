@@ -18,19 +18,24 @@
             <div class="form-group">
                 <p font-size: 40px;>At your Get Together, you should serve: </p>
 
+                <h2 style="text-align: center;">Snack</h2>
+                <p>As a snack, serve your guests some:</p>
+                <a id ="snacks" target="_blank" rel="noopener noreferrer">X</a>
+
                 <h2 style="text-align: center;">Entrée</h2>
                 <p >The main dish you should serve:</p>
-                <!-- <a id ="main_dish" href="https://google.com" target="_blank" rel="noopener noreferrer">X</a> -->
-                <a id ="main_dish">X</a>
+                <a id ="main_dish" target="_blank" rel="noopener noreferrer">X</a>
+                <!-- <a id ="main_dish">X</a> -->
 
                 <h2 style="text-align: center;">Beverage</h2>
                 <p>Pair your meal with the following refreshment:</p>
-                <p id ="drink">X</p>
+                <a id ="drink" target="_blank" rel="noopener noreferrer">X</a>
 
             </div>
+            <br>
 
             <div class="form-group">
-                <button id="results" style = "background-color: rgb(99, 125, 125);" type="button" onclick="get_main_dish();get_drink();change_button()">See Results</button>
+                <button id="results" style = "background-color: rgb(99, 125, 125);" type="button" onclick="get_snack();get_main_dish();get_drink();change_button()">See Results</button>
                 <script src="results_script.js"></script>
             </div>
 
