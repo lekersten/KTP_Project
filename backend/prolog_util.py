@@ -51,6 +51,13 @@ class PrologUtil:
         self.q_factory: PrologQueryFactory = PrologQueryFactory()
         self.vegan: bool = False
         self.vegetarian: bool = False
+        self.cuisine: str = ""
+        self.cuisine_options: list = [
+            "italian", "american", "asian",
+            "any_cuisine", "german", "french",
+            "japanese", "turkish", "indian", 
+            "mexican", "dutch", "spanish",
+            ]
         self.connect()
 
     def connect(self):
@@ -81,6 +88,8 @@ class PrologUtil:
             self.vegan = True
         elif (predicate.lower() == "vegetarian"):
             self.vegetarian = True
+        elif (predicate.lower() in self.cuisine_options):
+            self.cuisine = predicate.lower()
 
     def undo_add_predicate(self):
         """
@@ -117,3 +126,10 @@ class PrologUtil:
         :return: Whether the meals should be vegetarian or not
         """
         return self.vegetarian
+
+    def get_cuisine(self):
+        """
+        Returns The cuisine of the query
+        :return: A string describing the cuisine
+        """
+        return self.cuisine

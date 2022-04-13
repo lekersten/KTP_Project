@@ -54,3 +54,7 @@ async def get_vegan_status():
 @app.get("/app/query/vegetarian")
 async def get_vegetarian_status():
     return {"Vegetarian": prolog_main.get_vegetarian()}
+
+@app.get("/app/query/cuisine")
+async def get_cuisine():
+    return {"Cuisine": prolog_main.get_cuisine()}
