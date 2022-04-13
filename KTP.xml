@@ -1,0 +1,329 @@
+<?xml version="1.0"?>
+<knowledge>
+	<title>Catering Menu Inquiry</title>
+	<description>Welcome! Please answer the following questions to get an idea as to what kind of menu to serve at your next event.</description>
+
+	<goal name="menu-to-serve">
+		<description>For a main course, you should serve: </description>
+		<answer value="pizza"><![CDATA[Pizza]]></answer>
+	</goal>
+
+	<rule>
+		<description>All the first answers to the questions.</description>
+		<if>
+			<and>
+				<fact name="event-type">fancy</fact>
+				<fact name="event-size">intimate</fact>
+				<fact name="season">spring</fact>
+				<fact name="event-location">home</fact>
+				<fact name="event-time">day</fact>
+				<fact name="children-present">yes</fact>
+				<fact name="alt-menu">yes</fact>
+				<fact name="courses">zero</fact>
+				<fact name="food-restrictions">none</fact>
+				<fact name="cuisine">japanese</fact>
+				<fact name="drinks">beer_wine</fact>
+			</and>
+		</if>
+		<then>
+			<fact name="menu-to-serve">pizza</fact>
+		</then>
+	</rule>
+
+	<question>
+		<description>What kind of event are you hosting?</description>
+		<option>
+			<description>Fancy Celebration</description>
+			<then>
+				<fact name="event-type">fancy</fact>
+			</then>
+		</option>
+		<option>
+			<description>Party</description>
+			<then>
+				<fact name="event-type">party</fact>
+			</then>
+		</option>
+		<option>
+			<description>Casual Get Together</description>
+			<then>
+				<fact name="event-type">casual</fact>
+			</then>
+		</option>
+		<option>
+			<description>Holiday</description>
+			<then>
+				<fact name="event-type">holiday</fact>
+			</then>
+		</option>
+	</question>
+
+	<question>
+		<description>How many people will attend the event?</description>
+		<option>
+			<description>1-5</description>
+			<then>
+				<fact name="event-size">intimate</fact>
+			</then>
+		</option>
+		<option>
+			<description>6-10</description>
+			<then>
+				<fact name="event-size">small</fact>
+			</then>
+		</option>
+		<option>
+			<description>11-20</description>
+			<then>
+				<fact name="event-size">party</fact>
+			</then>
+		</option>
+		<option>
+			<description>20+</description>
+			<then>
+				<fact name="event-size">large</fact>
+			</then>
+		</option>
+	</question>
+
+	<question>
+		<description>During which time of year is your event?</description>
+		<option>
+			<description>Spring</description>
+			<then>
+				<fact name="season">spring</fact>
+			</then>
+		</option>
+		<option>
+			<description>Summer</description>
+			<then>
+				<fact name="season">summer</fact>
+			</then>
+		</option>
+		<option>
+			<description>Autumn</description>
+			<then>
+				<fact name="season">autumn</fact>
+			</then>
+		</option>
+		<option>
+			<description>Winter</description>
+			<then>
+				<fact name="season">winter</fact>
+			</then>
+		</option>
+	</question>
+
+	<question>
+		<description>Where is the event being held?</description>
+		<option>
+			<description>Indoors at Home</description>
+			<then>
+				<fact name="event-location">home</fact>
+			</then>
+		</option>
+		<option>
+			<description>Outdoors at Home</description>
+			<then>
+				<fact name="event-location">outsideHome</fact>
+			</then>
+		</option>
+		<option>
+			<description>Beach</description>
+			<then>
+				<fact name="event-location">beach</fact>
+			</then>
+		</option>
+		<option>
+			<description>Forest</description>
+			<then>
+				<fact name="event-location">forest</fact>
+			</then>
+		</option>
+	</question>
+
+	<question>
+		<description>What time will the event take place?</description>
+		<option>
+			<description>7am - 11am</description>
+			<then>
+				<fact name="event-time">day</fact>
+			</then>
+		</option>
+		<option>
+			<description>12pm - 5pm</description>
+			<then>
+				<fact name="event-time">afternoon</fact>
+			</then>
+		</option>
+		<option>
+			<description>6pm - 9pm</description>
+			<then>
+				<fact name="event-time">evening</fact>
+			</then>
+		</option>
+		<option>
+			<description>10pm - 1am</description>
+			<then>
+				<fact name="event-time">night</fact>
+			</then>
+		</option>
+	</question>
+
+	<question>
+		<description>Will there be children present?</description>
+		<option>
+			<description>Yes</description>
+			<then>
+				<fact name="children-present">yes</fact>
+			</then>
+		</option>
+		<option>
+			<description>Yes, children only</description>
+			<then>
+				<fact name="children-present">only</fact>
+			</then>
+		</option>
+		<option>
+			<description>No</description>
+			<then>
+				<fact name="children-present">no</fact>
+			</then>
+		</option>
+	</question>
+
+	<question>
+	<description>Would you like a menu for the children or picky eaters?</description>
+	<option>
+		<description>Yes</description>
+		<then>
+			<fact name="alt-menu">yes</fact>
+		</then>
+	</option>
+	<option>
+		<description>No</description>
+		<then>
+			<fact name="alt-menu">no</fact>
+		</then>
+	</option>
+	</question>
+
+	<question>
+		<description>How many courses would you like to serve?</description>
+		<option>
+			<description>None - Buffet Style</description>
+			<then>
+				<fact name="courses">zero</fact>
+			</then>
+		</option>
+		<option>
+			<description>3 - Appetizer, Entree, Dessert</description>
+			<then>
+				<fact name="courses">three</fact>
+			</then>
+		</option>
+		<option>
+			<description>The more the better!</description>
+			<then>
+				<fact name="courses">many</fact>
+			</then>
+		</option>
+	</question>
+
+	<question>
+		<description>Are there any known food restrictions?</description>
+		<option>
+			<description>No</description>
+			<then>
+				<fact name="food-restrictions">none</fact>
+			</then>
+		</option>
+		<option>
+			<description>Vegetarian</description>
+			<then>
+				<fact name="food-restrictions">vegatarian</fact>
+			</then>
+		</option>
+		<option>
+			<description>Vegan</description>
+			<then>
+				<fact name="food-restrictions">vegan</fact>
+			</then>
+		</option>
+		<option>
+			<description>Dairy</description>
+			<then>
+				<fact name="food-restrictions">dairy</fact>
+			</then>
+		</option>
+		<option>
+			<description>Food Allergies</description>
+			<then>
+				<fact name="food-restrictions">allergies</fact>
+			</then>
+		</option>
+		<option>
+			<description>Gluten Free</description>
+			<then>
+				<fact name="food-restrictions">gluten-free</fact>
+			</then>
+		</option>
+	</question>
+
+	<question>
+		<description>Do you have a certain cuisine in mind?</description>
+		<option>
+			<description>Japanese</description>
+			<then>
+				<fact name="cuisine">japanese</fact>
+			</then>
+		</option>
+		<option>
+			<description>Italian</description>
+			<then>
+				<fact name="cuisine">italian</fact>
+			</then>
+		</option>
+		<option>
+			<description>Mexican</description>
+			<then>
+				<fact name="cuisine">mexican</fact>
+			</then>
+		</option>
+		<option>
+			<description>Greek</description>
+			<then>
+				<fact name="cuisine">greek</fact>
+			</then>
+		</option>
+		<option>
+			<description>Surprise me!</description>
+			<then>
+				<fact name="cuisine">surprise</fact>
+			</then>
+		</option>
+	</question>
+
+	<question>
+	<description>Which type of beverage would you like paired with your meal?</description>
+	<option>
+		<description>Beers and Wine</description>
+		<then>
+			<fact name="drinks">beer_wine</fact>
+		</then>
+	</option>
+	<option>
+		<description>Cocktails</description>
+		<then>
+			<fact name="drinks">cocktails</fact>
+		</then>
+	</option>
+	<option>
+		<description>Soft Drinks</description>
+		<then>
+			<fact name="drinks">soft</fact>
+		</then>
+	</option>
+	</question>
+
+</knowledge>
