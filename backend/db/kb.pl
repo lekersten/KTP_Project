@@ -79,6 +79,11 @@ snacks(samosas).
 snacks(nachos).
 
 % Event type relations _ fancy, party, or get_together
+
+:- discontiguous get_together/1.
+:- discontiguous fancy/1.
+:- discontiguous party/1.
+
 get_together(tacos).
 party(tacos).
 get_together(enchilladas).
@@ -176,6 +181,11 @@ party(nachos).
 
 
 % Season relations (winter includes fall, summer includes spring)
+
+:- discontiguous winter/1.
+:- discontiguous summer/1.
+:- discontiguous both_seasons/1.
+
 winter(X) :- both_seasons(X).
 summer(X) :- both_seasons(X).
 
@@ -257,6 +267,11 @@ both_seasons(borek).
 winter(samosas).
 
 % Where relation
+
+:- discontiguous indoor/1.
+:- discontiguous anywhere/1.
+:- discontiguous outdoor/1.
+
 outdoor(X) :- anywhere(X).
 indoor(X)  :- anywhere(X).
 
@@ -338,6 +353,11 @@ anywhere(borek).
 anywhere(samosas).
 
 % Time (lunch_dinner_night)
+:- discontiguous lunch/1.
+:- discontiguous dinner/1.
+:- discontiguous night/1.
+:- discontiguous all_meals/1.
+
 lunch(X)  :- all_meals(X).
 dinner(X) :- all_meals(X).
 night(X)  :- all_meals(X).
@@ -474,6 +494,13 @@ children(nachos).
 children(spaghetti_bolognese).
 
 % Vegan / Vegetarian / Dairy_free / nut allergy / none
+
+:- discontiguous nuts/1.
+:- discontiguous vegan/1.
+:- discontiguous vegetarian/1.
+:- discontiguous dairy/1.
+:- discontiguous none/1.
+
 vegan(X)      :- drink(X).
 vegetarian(X) :- drink(X).
 dairy(X)      :- drink(X), dif(X, mango_lassi).
@@ -539,13 +566,33 @@ nuts(spaghetti_bolognese).
 
 
 % Cuisine
+
+:- discontiguous italian/1.
+:- discontiguous asian/1.
+:- discontiguous indian/1.
+:- discontiguous spanish/1.
+:- discontiguous any_cuisine/1.
+:- discontiguous mexican/1.
+:- discontiguous japanese/1.
+:- discontiguous turkish/1.
+:- discontiguous american/1.
+:- discontiguous french/1.
+:- discontiguous spanish/1.
+:- discontiguous german/1.
+
 mexican(X)  :- any_cuisine(X).
+mexican(X)  :- american(X).
 american(X) :- any_cuisine(X).
+american(X) :- mexican(X).
+american(X) :- italian(X).
+american(X) :- spanish(X).
 italian(X)  :- any_cuisine(X).
 asian(X)    :- any_cuisine(X).
+asian(X)    :- japanese(X).
 spanish(X)  :- any_cuisine(X).
 german(X)  :- any_cuisine(X).
-turkish(X)  :- any_cuisine(X).
+german(X) :- american(X).
+turkish(X) :- any_cuisine(X).
 indian(X)  :- any_cuisine(X).
 japanese(X)  :- any_cuisine(X).
 french(X) :- any_cuisine(X).
