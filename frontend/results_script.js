@@ -40,7 +40,10 @@ function get_menu_item(item_str, vegan = false, vegetarian = false) {
     const parsed_data = parse_results(data);
 
     // Select item
-    const selected_item = select_item(parsed_data);
+    const selected_item_prototype = select_item(parsed_data);
+
+    // Processes the selected item
+    const selected_item = process_menu_item(selected_item_prototype);
 
     // Check if vegan
     if (vegan) {
@@ -144,5 +147,15 @@ function get_vegetarian() {
     const vegetarian = JSON.parse(parsedData["Vegetarian"]);
 
     return vegetarian;
+}
+
+// Capitalizes the first letter of a string
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+// Processes the menu items before display
+function process_menu_item(menu_item) {
+    return capitalizeFirstLetter(menu_item.replace("_", " "));
 }
 

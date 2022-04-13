@@ -10,24 +10,34 @@
 <body>
     <main>
         <header>
-            <h1 id="title">Results of Your Survey</h1>
+            <h1 id="title">Your Menu</h1>
             <p id="description">Click on the items below to get the results for your menu.</p>
             <p id="description">(Open and close the subsections for a different suggestion!)</p>
         </header>
+
+        <body>At your Get Together, you should serve: </body>
+
         <form id="survey-form" action="survey.html">
             <div class="form-group">
                 <details onclick="get_main_dish()">
                     <summary>Main Dish</summary>
-                    <p id ="main_dish">Main Dish</p>
+                    <p id ="main_dish">The main dish you should serve:</p>
                 </details>
                 <script src="results_script.js"></script>
             </div>
+
             <div class="form-group">
                 <details onclick="get_drink()">
                     <summary>Drink</summary>
                     <p id = "drink">Drink</p>
                 </details>
             </div>
+
+            <div class="form-group">
+                <button id="submit" type="button" onclick="get_main_dish();get_drink()">Refresh Results</button>
+                <script src="results_script.js"></script>
+            </div>
+
             <div class="form-group">
                 <button id="submit" onclick="resetQuery()">Redo Survey</button>
                 <script>
@@ -40,6 +50,7 @@
                 </script>
             </div>
         </form>
+
     </main>
 </body>
 
