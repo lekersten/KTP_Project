@@ -6,16 +6,16 @@
 :- discontiguous dairy/1.
 :- discontiguous none/1.
 
-% vegan(X)      :- drink(X).
-% vegetarian(X) :- drink(X).
-% dairy(X)      :- drink(X), dif(X, mango_Lassi).
-% dairy(X)      :- snacks(X).
-% dairy(X)      :- appetizers(X).
-% nuts(X)       :- drink(X).
-% nuts(X)       :- appetizers(X).
-% nuts(X)       :- dessert(X).
-% nuts(X)       :- snacks(X), dif(X, nutsmix).
-% vegetarian(X) :- vegan(X).
+vegan(X)      :- drink(X).
+vegetarian(X) :- drink(X).
+dairy(X)      :- drink(X), dif(X, mango_Lassi).
+dairy(X)      :- snacks(X).
+dairy(X)      :- appetizers(X).
+nuts(X)       :- drink(X).
+nuts(X)       :- appetizers(X).
+nuts(X)       :- dessert(X).
+nuts(X)       :- snacks(X), dif(X, nutsmix).
+vegetarian(X) :- vegan(X).
 
 vegan(crackers).
 vegan(peanuts).

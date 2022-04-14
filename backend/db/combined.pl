@@ -1,306 +1,173 @@
-% Children existence relations
- children(baklava).
- children(banana_Split).
- children(baquette_with_Spread).
- children(barbecue_Ribs).
- children(bingsu).
- children(blt).
- children(borek).
- children(bratwurst).
- children(brownies).
- children(buffalo_Wings).
- children(buffet).
- children(burger).
- children(burrito).
- children(butter_Chicken).
- children(cheesecake).
- children(chicken).
- children(chips).
- children(chips_and_Guacamole).
- children(chocolate_Fondue).
- children(churros).
- children(cider_Donuts).
- children(clam_Chowder).
- children(cordon_Bleu).
- children(corn_Dogs).
- children(crackers).
- children(creme_Brulee).
- children(cupcakes).
- children(currywurst).
- children(dango).
- children(deep_Dish_Pizza).
- children(doner).
- children(dumplings).
- children(eclair).
- children(empanadas).
- children(enchilladas).
- children(fried_Chicken).
- children(fried_Dough).
- children(fried_Rice).
- children(fries).
- children(frikadellen).
- children(gelato).
- children(gyoza).
- children(hot_Dogs).
- children(ice_Cream).
- children(kaiserschmarrn).
- children(kasespatzle).
- children(kebab).
- children(lamb_Wrap).
- children(mac_and_Cheese).
- children(macaron).
- children(manti).
- children(meatballs).
- children(mince_Borek).
- children(mocktail).
- children(naan).
- children(nachos).
- children(nachos).
- children(nutsmix).
- children(onion_Rings).
- children(onion_soup).
- children(pad_Thai).
- children(peanuts).
- children(pie).
- children(pizza).
- children(popcorn).
- children(potatoes_Au_Gratin).
- children(profiteroles).
- children(pudding).
- children(quesadilla).
- children(quiche_Lorraine).
- children(ravioli).
- children(rote_Grutze).
- children(savory_Crepes).
- children(schnitzel).
- children(soda).
- children(spaghetti_Bolognese).
- children(spinach_and_Feta_Borek). children(stuffed_Leaves).
- children(sweet_Crepes).
- children(tacos).
- children(temaki).
- children(tiramisu).
- children(tortellini).
- children(tteokbokki).
+
  
  
  
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- %
- % % mexican(X)  :- american(X).
- % % spanish(X)  :- italian(X).   
- % Cuisine
- % american(X) :- any_cuisine(X).
- % americans(X) :- italian(X).
- % americans(X) :- mexican(X).
- % americans(X) :- spanish(X).
- % asian(X)    :- any_cuisine(X).
- % asian(X)    :- indian(X).
- % asian(X)    :- japanese(X).
- % european(X) :- french(X).
- % european(X) :- german(X).
- % european(X) :- italian(X).
- % european(X) :- spanish(X).
- % french(X)   :- any_cuisine(X).
- % german(X)   :- american(X).
- % german(X)   :- any_cuisine(X).
- % indian(X)   :- any_cuisine(X).
- % italian(X)  :- any_cuisine(X).
- % italian(X)  :- spanish(X).
- % japanese(X) :- any_cuisine(X).
- % mexican(X)  :- any_cuisine(X).
- % spanish(X)  :- any_cuisine(X).
- % turkish(X)  :- any_cuisine(X).
- :- discontiguous american/1.
- :- discontiguous any_cuisine/1.
- :- discontiguous asian/1.
- :- discontiguous french/1.
- :- discontiguous german/1.
- :- discontiguous indian/1.
- :- discontiguous italian/1.
- :- discontiguous japanese/1.
- :- discontiguous mexican/1.
- :- discontiguous spanish/1.
- :- discontiguous spanish/1.
- :- discontiguous turkish/1.
- american(banana_Split).
- american(barbecue_Ribs).
- american(blt).
- american(blt).
- american(brownies).
- american(buffalo_Wings).
- american(burger).
- american(cider_Donuts).
- american(clam_Chowder).
- american(corn_Dogs).
- american(cosmopolitan).
- american(deep_Dish_Pizza).
- american(fried_Chicken).
- american(fried_Dough).
- american(hot_Dogs).
- american(mac_and_Cheese).
- american(maryland_Crabs).
- american(onion_Rings).
- any_cuisine(beer).
- any_cuisine(buffet).
- any_cuisine(champagne).
- any_cuisine(cheese_Fondue).
- any_cuisine(cheesecake).
- any_cuisine(chicken).
- any_cuisine(chips).
- any_cuisine(chocolate_Fondue).
- any_cuisine(cocktails).
- any_cuisine(crackers).
- any_cuisine(cupcakes).
- any_cuisine(fondue).
- any_cuisine(fries).
- any_cuisine(ice_Cream).
- any_cuisine(lobster).
- any_cuisine(martini).
- any_cuisine(mimosas).
- any_cuisine(mocktail).
- any_cuisine(moscow_Mule).
- any_cuisine(nutsmix).
- any_cuisine(open_Bar).
- any_cuisine(peanuts).
- any_cuisine(pie).
- any_cuisine(popcorn).
- any_cuisine(pudding).
- any_cuisine(salad).
- any_cuisine(soda).
- any_cuisine(soup).
- any_cuisine(steak).
- any_cuisine(turkey).
- any_cuisine(whiskey).
- any_cuisine(wine).
- asian(baklava).
- asian(bingsu).
- asian(curry).
- asian(dumplings).
- asian(fried_Rice).
- asian(hot_Pot).
- asian(japchae).
- asian(laksa).
- asian(loempia).
- asian(pad_Thai).
- asian(seafood_Jeon).
- asian(tteokbokki).
- asian(tteokbokki).
- dutch(bitterballen).
- french(baquette_with_Spread).
- french(bloody_Mary).
- french(brie).
- french(charcuterie).
- french(creme_Brulee).
- french(eclair).
- french(escargot).
- french(macaron).
- french(onion_soup).
- french(potatoes_Au_Gratin).
- french(profiteroles).
- french(quiche_Lorraine).
- french(ratatouille).
- french(savory_Crepes).
- french(sweet_Crepes).
- german(bratwurst).
- german(cordon_Bleu).
- german(currywurst).
- german(frikadellen).
- german(gluhwein).
- german(kaiserschmarrn).
- german(kasespatzle).
- german(matjes).
- german(rote_grutze).
- german(schnitzel).
- indian(butter_Chicken).
- indian(curry).
- indian(gulab_Jamun).
- indian(mango_Lassi).
- indian(naan).
- indian(papadam).
- indian(samosas).
- indian(tandoori_Chicken).
- indian(vegetable_Curry).
- italian(arancini).
- italian(bellini).
- italian(bruschetta).
- italian(calzone).
- italian(caponata).
- italian(caprese_Salad).
- italian(carpaccio).
- italian(gelato).
- italian(gnocchi).
- italian(lasagna).
- italian(paella).
- italian(pizza).
- italian(prosciutto_and_Melon).
- italian(ravioli).
- italian(risotto).
- italian(spaghetti_Bolognese).
- italian(spaghetti_and_Meatballs).
- italian(tiramisu).
- italian(tortellini).
- japanese(dango).
- japanese(donburi).
- japanese(gyoza).
- japanese(miso_Soup).
- japanese(onigiri).
- japanese(ramen).
- japanese(sake).
- japanese(soba).
- japanese(sushi).
- japanese(takoyaki).
- japanese(temaki).
- japanese(tonkatsu).
- japanese(udon).
- mexican(burrito).
- mexican(ceviche).
- mexican(chili).
- mexican(chips_and_Guacamole).
- mexican(empanadas).
- mexican(enchilladas).
- mexican(fajita).
- mexican(fried_Plantains).
- mexican(margarita).
- mexican(nachos).
- mexican(nachos).
- mexican(pina_Colada).
- mexican(quesadilla).
- mexican(quesadilla).
- mexican(tacos).
- mexican(tamales).
- mexican(tequila).
- mexican(tequila_Sunrise).
- spanish(churros).
- spanish(flan).
- spanish(gazpacho).
- spanish(mojito).
- spanish(sangria).
- spanish(tapas).
- turkish(borek).
- turkish(doner).
- turkish(falafel). turkish(kebab).
- turkish(lahmacun).
- turkish(lamb_Wrap).
- turkish(lentil_Soup).
- turkish(manti).
- turkish(mince_Borek).
- turkish(spinach_and_Feta_Borek).
- turkish(stuffed_Leaves).
+ % Dish Type (Either Main, Snack, App., Drink)
+ appetizers(arancini).
+ appetizers(baquette_with_Spread).
+ appetizers(bitterballen).
+ appetizers(brie).
+ appetizers(bruschetta).
+ appetizers(caprese_Salad).
+ appetizers(carpaccio).
+ appetizers(ceviche).
+ appetizers(charcuterie).
+ appetizers(cheese_Fondue).
+ appetizers(chips_and_Guacamole).
+ appetizers(clam_Chowder).
+ appetizers(dumplings).
+ appetizers(empanadas).
+ appetizers(escargot).
+ appetizers(fajita).
+ appetizers(fried_Plantains).
+ appetizers(gazpacho).
+ appetizers(gyoza).
+ appetizers(lentil_Soup).
+ appetizers(loempia).
+ appetizers(meatballs).
+ appetizers(miso_Soup).
+ appetizers(nachos).
+ appetizers(onigiri).
+ appetizers(onion_soup).
+ appetizers(papadam).
+ appetizers(potatoes_Au_Gratin).
+ appetizers(prosciutto_and_Melon).
+ appetizers(quesadilla).
+ appetizers(salad).
+ appetizers(soup).
+ appetizers(stuffed_Leaves).
+ appetizers(temaki).
+ appetizers(tteokbokki).
+ dessert(baklava).
+ dessert(banana_Split).
+ dessert(bingsu).
+ dessert(brownies).
+ dessert(cheesecake).
+ dessert(chocolate_Fondue).
+ dessert(churros).
+ dessert(cider_Donuts).
+ dessert(creme_Brulee).
+ dessert(cupcakes).
+ dessert(dango).
+ dessert(eclair).
+ dessert(flan).
+ dessert(fried_Dough).
+ dessert(gelato).
+ dessert(gulab_Jamun).
+ dessert(ice_Cream).
+ dessert(kaiserschmarrn).
+ dessert(macaron).
+ dessert(pie).
+ dessert(profiteroles).
+ dessert(pudding).
+ dessert(rote_Grutze).
+ dessert(sweet_Crepes).
+ dessert(tiramisu).
+ drink(beer).
+ drink(bellini).
+ drink(bloody_Mary).
+ drink(champagne).
+ drink(cocktails).
+ drink(cosmopolitan).
+ drink(gluhwein).
+ drink(mango_Lassi).
+ drink(margarita).
+ drink(martini).
+ drink(mimosas).
+ drink(mocktail).
+ drink(mojito).
+ drink(moscow_Mule).
+ drink(open_Bar).
+ drink(pina_Colada).
+ drink(sake).
+ drink(sangria).
+ drink(soda).
+ drink(tequila).
+ drink(tequila_Sunrise).
+ drink(whiskey).
+ drink(wine).
+ main_dish(barbecue_Ribs).
+ main_dish(blt).
+ main_dish(bratwurst).
+ main_dish(buffet).
+ main_dish(burger).
+ main_dish(burrito).
+ main_dish(butter_Chicken).
+ main_dish(calzone).
+ main_dish(caponata).
+ main_dish(chicken).
+ main_dish(chili).
+ main_dish(cordon_Bleu).
+ main_dish(curry).
+ main_dish(currywurst).
+ main_dish(deep_Dish_Pizza).
+ main_dish(donburi).
+ main_dish(doner).
+ main_dish(enchilladas).
+ main_dish(fajita).
+ main_dish(fondue).
+ main_dish(fried_Chicken).
+ main_dish(fried_Rice).
+ main_dish(frikadellen).
+ main_dish(gnocchi).
+ main_dish(hot_Dogs).
+ main_dish(hot_Pot).
+ main_dish(japchae).
+ main_dish(kasespatzle).
+ main_dish(kebab).
+ main_dish(lahmacun).
+ main_dish(laksa).
+ main_dish(lamb_Wrap).
+ main_dish(lasagna).
+ main_dish(lobster).
+ main_dish(mac_and_Cheese).
+ main_dish(manti).
+ main_dish(maryland_Crabs).
+ main_dish(matjes).
+ main_dish(pad_Thai).
+ main_dish(paella).
+ main_dish(pizza).
+ main_dish(quesadilla).
+ main_dish(quiche_Lorraine).
+ main_dish(ramen).
+ main_dish(ratatouille).
+ main_dish(ravioli).
+ main_dish(risotto).
+ main_dish(savory_Crepes).
+ main_dish(schnitzel).
+ main_dish(seafood_Jeon).
+ main_dish(soba).
+ main_dish(spaghetti_Bolognese).
+ main_dish(steak).
+ main_dish(sushi).
+ main_dish(tacos).
+ main_dish(tamales).
+ main_dish(tandoori_Chicken).
+ main_dish(tapas).
+ main_dish(tonkatsu).
+ main_dish(tortellini).
+ main_dish(tteokbokki).
+ main_dish(turkey).
+ main_dish(udon).
+ main_dish(vegetable_Curry).
+ snacks(borek).
+ snacks(buffalo_Wings).
+ snacks(chips).
+ snacks(chips_and_Guacamole).
+ snacks(corn_Dogs).
+ snacks(crackers).
+ snacks(falafel).
+ snacks(fries).
+ snacks(mince_Borek).
+ snacks(naan).
+ snacks(nachos).
+ snacks(nutsmix).
+ snacks(onion_Rings). snacks(peanuts).
+ snacks(popcorn).
+ snacks(samosas).
+ snacks(spinach_and_Feta_Borek).
+ snacks(takoyaki).
  
  
  
@@ -530,10 +397,185 @@
  
  
  
+ % Season relations (winter includes fall, summer includes spring)
+ :- discontiguous both_seasons/1.
+ :- discontiguous summer/1.
+ :- discontiguous winter/1.
+ both_seasons(arancini).
+ both_seasons(baklava).
+ both_seasons(baquette_with_Spread).
+ both_seasons(beer).
+ both_seasons(bellini).
+ both_seasons(bitterballen).
+ both_seasons(bloody_Mary).
+ both_seasons(blt).
+ both_seasons(borek).
+ both_seasons(bratwurst).
+ both_seasons(brie).
+ both_seasons(bruschetta).
+ both_seasons(buffalo_Wings).
+ both_seasons(buffet).
+ both_seasons(burger).
+ both_seasons(burrito).
+ both_seasons(butter_Chicken).
+ both_seasons(calzone).
+ both_seasons(caponata).
+ both_seasons(champagne).
+ both_seasons(charcuterie).
+ both_seasons(chicken).
+ both_seasons(chips).
+ both_seasons(chips_and_Guacamole).
+ both_seasons(chocolate_Fondue).
+ both_seasons(churros).
+ both_seasons(cider_Donuts).
+ both_seasons(clam_Chowder).
+ both_seasons(cocktails).
+ both_seasons(cordon_Bleu).
+ both_seasons(cosmopolitan).
+ both_seasons(crackers).
+ both_seasons(cupcakes).
+ both_seasons(currywurst).
+ both_seasons(dango).
+ both_seasons(deep_Dish_Pizza).
+ both_seasons(doner).
+ both_seasons(dumplings).
+ both_seasons(eclair).
+ both_seasons(empanadas).
+ both_seasons(escargot).
+ both_seasons(falafel). both_seasons(flan).
+ both_seasons(fried_Chicken).
+ both_seasons(fried_Dough).
+ both_seasons(fried_Rice).
+ both_seasons(fries).
+ both_seasons(frikadellen).
+ both_seasons(gnocchi).
+ both_seasons(gulab_Jamun).
+ both_seasons(kaiserschmarrn).
+ both_seasons(kebab).
+ both_seasons(lahmacun).
+ both_seasons(laksa).
+ both_seasons(lamb_Wrap).
+ both_seasons(loempia).
+ both_seasons(mac_and_Cheese).
+ both_seasons(macaron).
+ both_seasons(mango_Lassi).
+ both_seasons(manti).
+ both_seasons(martini).
+ both_seasons(meatballs).
+ both_seasons(mimosas).
+ both_seasons(mince_Borek).
+ both_seasons(mince_Borek).
+ both_seasons(mocktail).
+ both_seasons(moscow_Mule).
+ both_seasons(nachos).
+ both_seasons(nachos).
+ both_seasons(nutsmix).
+ both_seasons(onigiri).
+ both_seasons(onion_Rings).
+ both_seasons(open_Bar).
+ both_seasons(pad_Thai).
+ both_seasons(papadam).
+ both_seasons(peanuts).
+ both_seasons(pie).
+ both_seasons(pizza).
+ both_seasons(popcorn).
+ both_seasons(potatoes_Au_Gratin).
+ both_seasons(profiteroles).
+ both_seasons(pudding).
+ both_seasons(quesadilla).
+ both_seasons(quesadilla).
+ both_seasons(ravioli).
+ both_seasons(rote_Grutze).
+ both_seasons(sake).
+ both_seasons(sangria).
+ both_seasons(savory_Crepes).
+ both_seasons(savory_Crepes).
+ both_seasons(schnitzel).
+ both_seasons(soda).
+ both_seasons(spaghetti_Bolognese).
+ both_seasons(spinach_and_Feta_Borek).
+ both_seasons(spinach_and_Feta_Borek).
+ both_seasons(steak).
+ both_seasons(stuffed_Leaves).
+ both_seasons(tacos).
+ both_seasons(takoyaki).
+ both_seasons(tamales).
+ both_seasons(tequila).
+ both_seasons(tiramisu).
+ both_seasons(tonkatsu).
+ both_seasons(tortellini).
+ both_seasons(tteokbokki).
+ both_seasons(udon).
+ both_seasons(vegetable_Curry).
+ both_seasons(whiskey).
+ both_seasons(wine).
+ margarita(margarita).
+ summer(X) :- both_seasons(X).
+ summer(banana_Split).
+ summer(barbecue_Ribs).
+ summer(bingsu).
+ summer(caprese_Salad).
+ summer(carpaccio).
+ summer(ceviche).
+ summer(cheesecake).
+ summer(chips_and_Guacamole).
+ summer(corn_Dogs).
+ summer(donburi).
+ summer(fried_Plantains).
+ summer(gazpacho).
+ summer(gelato).
+ summer(hot_Dogs).
+ summer(ice_Cream).
+ summer(japchae).
+ summer(lobster).
+ summer(maryland_Crabs).
+ summer(matjes).
+ summer(mojito).
+ summer(pina_Colada).
+ summer(prosciutto_and_Melon).
+ summer(ratatouille).
+ summer(salad).
+ summer(seafood_Jeon).
+ summer(soba).
+ summer(sushi).
+ summer(tapas).
+ summer(temaki).
+ summer(tequila_Sunrise).
+ winter(X) :- both_seasons(X).
+ winter(brownies).
+ winter(cheese_Fondue).
+ winter(chili).
+ winter(creme_Brulee).
+ winter(curry).
+ winter(enchilladas).
+ winter(fajita).
+ winter(fondue).
+ winter(gluhwein).
+ winter(gyoza).
+ winter(hot_Pot).
+ winter(kasespatzle).
+ winter(lasagna).
+ winter(lentil_Soup).
+ winter(miso_Soup).
+ winter(naan).
+ winter(onion_soup).
+ winter(paella).
+ winter(quiche_Lorraine).
+ winter(ramen).
+ winter(risotto).
+ winter(samosas).
+ winter(soup).
+ winter(tandoori_Chicken).
+ winter(turkey).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  % Where relation
- % indoor(X)  :- anywhere(X).
- % outdoor(X) :- anywhere(X).
  :- discontiguous anywhere/1.
  :- discontiguous indoor/1.
  :- discontiguous outdoor/1.
@@ -673,6 +715,7 @@
  anywhere(vegetable_Curry).
  anywhere(whiskey).
  anywhere(wine).
+ indoor(X)  :- anywhere(X).
  indoor(calzone).
  indoor(caprese_Salad).
  indoor(ceviche).
@@ -702,183 +745,305 @@
  indoor(tortellini).
  indoor(turkey).
  indoor(udon).
+ outdoor(X) :- anywhere(X).
  
  
  
- 
- 
- 
- 
- % Season relations (winter includes fall, summer includes spring)
- % summer(X) :- both_seasons(X).
- % winter(X) :- both_seasons(X).
- :- discontiguous both_seasons/1.
- :- discontiguous summer/1.
- :- discontiguous winter/1.
- both_seasons(arancini).
- both_seasons(baklava).
- both_seasons(baquette_with_Spread).
- both_seasons(beer).
- both_seasons(bellini).
- both_seasons(bitterballen).
- both_seasons(bloody_Mary).
- both_seasons(blt).
- both_seasons(borek).
- both_seasons(bratwurst).
- both_seasons(brie).
- both_seasons(bruschetta).
- both_seasons(buffalo_Wings).
- both_seasons(buffet).
- both_seasons(burger).
- both_seasons(burrito).
- both_seasons(butter_Chicken).
- both_seasons(calzone).
- both_seasons(caponata).
- both_seasons(champagne).
- both_seasons(charcuterie).
- both_seasons(chicken).
- both_seasons(chips).
- both_seasons(chips_and_Guacamole).
- both_seasons(chocolate_Fondue).
- both_seasons(churros).
- both_seasons(cider_Donuts).
- both_seasons(clam_Chowder).
- both_seasons(cocktails).
- both_seasons(cordon_Bleu).
- both_seasons(cosmopolitan).
- both_seasons(crackers).
- both_seasons(cupcakes).
- both_seasons(currywurst).
- both_seasons(dango).
- both_seasons(deep_Dish_Pizza).
- both_seasons(doner).
- both_seasons(dumplings).
- both_seasons(eclair).
- both_seasons(empanadas).
- both_seasons(escargot).
- both_seasons(falafel). both_seasons(flan).
- both_seasons(fried_Chicken).
- both_seasons(fried_Dough).
- both_seasons(fried_Rice).
- both_seasons(fries).
- both_seasons(frikadellen).
- both_seasons(gnocchi).
- both_seasons(gulab_Jamun).
- both_seasons(kaiserschmarrn).
- both_seasons(kebab).
- both_seasons(lahmacun).
- both_seasons(laksa).
- both_seasons(lamb_Wrap).
- both_seasons(loempia).
- both_seasons(mac_and_Cheese).
- both_seasons(macaron).
- both_seasons(mango_Lassi).
- both_seasons(manti).
- both_seasons(martini).
- both_seasons(meatballs).
- both_seasons(mimosas).
- both_seasons(mince_Borek).
- both_seasons(mince_Borek).
- both_seasons(mocktail).
- both_seasons(moscow_Mule).
- both_seasons(nachos).
- both_seasons(nachos).
- both_seasons(nutsmix).
- both_seasons(onigiri).
- both_seasons(onion_Rings).
- both_seasons(open_Bar).
- both_seasons(pad_Thai).
- both_seasons(papadam).
- both_seasons(peanuts).
- both_seasons(pie).
- both_seasons(pizza).
- both_seasons(popcorn).
- both_seasons(potatoes_Au_Gratin).
- both_seasons(profiteroles).
- both_seasons(pudding).
- both_seasons(quesadilla).
- both_seasons(quesadilla).
- both_seasons(ravioli).
- both_seasons(rote_Grutze).
- both_seasons(sake).
- both_seasons(sangria).
- both_seasons(savory_Crepes).
- both_seasons(savory_Crepes).
- both_seasons(schnitzel).
- both_seasons(soda).
- both_seasons(spaghetti_Bolognese).
- both_seasons(spinach_and_Feta_Borek).
- both_seasons(spinach_and_Feta_Borek).
- both_seasons(steak).
- both_seasons(stuffed_Leaves).
- both_seasons(tacos).
- both_seasons(takoyaki).
- both_seasons(tamales).
- both_seasons(tequila).
- both_seasons(tiramisu).
- both_seasons(tonkatsu).
- both_seasons(tortellini).
- both_seasons(tteokbokki).
- both_seasons(udon).
- both_seasons(vegetable_Curry).
- both_seasons(whiskey).
- both_seasons(wine).
- margarita(margarita).
- summer(banana_Split).
- summer(barbecue_Ribs).
- summer(bingsu).
- summer(caprese_Salad).
- summer(carpaccio).
- summer(ceviche).
- summer(cheesecake).
- summer(chips_and_Guacamole).
- summer(corn_Dogs).
- summer(donburi).
- summer(fried_Plantains).
- summer(gazpacho).
- summer(gelato).
- summer(hot_Dogs).
- summer(ice_Cream).
- summer(japchae).
- summer(lobster).
- summer(maryland_Crabs).
- summer(matjes).
- summer(mojito).
- summer(pina_Colada).
- summer(prosciutto_and_Melon).
- summer(ratatouille).
- summer(salad).
- summer(seafood_Jeon).
- summer(soba).
- summer(sushi).
- summer(tapas).
- summer(temaki).
- summer(tequila_Sunrise).
- winter(brownies).
- winter(cheese_Fondue).
- winter(chili).
- winter(creme_Brulee).
- winter(curry).
- winter(enchilladas).
- winter(fajita).
- winter(fondue).
- winter(gluhwein).
- winter(gyoza).
- winter(hot_Pot).
- winter(kasespatzle).
- winter(lasagna).
- winter(lentil_Soup).
- winter(miso_Soup).
- winter(naan).
- winter(onion_soup).
- winter(paella).
- winter(quiche_Lorraine).
- winter(ramen).
- winter(risotto).
- winter(samosas).
- winter(soup).
- winter(tandoori_Chicken).
- winter(turkey).
+ %
+ %
+ %
+ %
+ % Time (lunch_dinner_night)
+ :- discontiguous all_meals/1.
+ :- discontiguous dinner/1.
+ :- discontiguous lunch/1.
+ :- discontiguous night/1.
+ all_meals(all_meals).
+ all_meals(baklava).
+ all_meals(banana_Split).
+ all_meals(baquette_with_Spread).
+ all_meals(beer).
+ all_meals(bingsu).
+ all_meals(borek).
+ all_meals(brie).
+ all_meals(brownies).
+ all_meals(buffalo_Wings).
+ all_meals(buffet).
+ all_meals(burrito).
+ all_meals(caponata).
+ all_meals(champagne).
+ all_meals(charcuterie).
+ all_meals(cheesecake).
+ all_meals(chili).
+ all_meals(chips).
+ all_meals(chips_and_Guacamole).
+ all_meals(chocolate_Fondue).
+ all_meals(churros).
+ all_meals(cider_Donuts).
+ all_meals(cosmopolitan).
+ all_meals(crackers).
+ all_meals(creme_Brulee).
+ all_meals(cupcakes).
+ all_meals(dango).
+ all_meals(deep_Dish_Pizza).
+ all_meals(donburi).
+ all_meals(eclair).
+ all_meals(falafel). all_meals(flan).
+ all_meals(fried_Dough).
+ all_meals(fried_Plantains).
+ all_meals(fried_Rice).
+ all_meals(fries).
+ all_meals(gelato).
+ all_meals(gulab_Jamun).
+ all_meals(gyoza).
+ all_meals(hot_Dogs).
+ all_meals(hot_Pot).
+ all_meals(ice_Cream).
+ all_meals(japchae).
+ all_meals(kaiserschmarrn).
+ all_meals(kebab).
+ all_meals(lahmacun).
+ all_meals(laksa).
+ all_meals(lamb_Wrap).
+ all_meals(lentil_Soup).
+ all_meals(mac_and_Cheese).
+ all_meals(macaron).
+ all_meals(manti).
+ all_meals(mince_Borek).
+ all_meals(miso_Soup).
+ all_meals(mocktail).
+ all_meals(naan).
+ all_meals(nachos).
+ all_meals(nachos).
+ all_meals(nutsmix).
+ all_meals(onion_Rings).
+ all_meals(open_Bar).
+ all_meals(pad_Thai).
+ all_meals(peanuts).
+ all_meals(pie).
+ all_meals(pina_Colada).
+ all_meals(pizza).
+ all_meals(popcorn).
+ all_meals(profiteroles).
+ all_meals(prosciutto_and_Melon).
+ all_meals(pudding).
+ all_meals(quesadilla).
+ all_meals(ramen).
+ all_meals(ravioli).
+ all_meals(rote_Grutze).
+ all_meals(samosas).
+ all_meals(sangria).
+ all_meals(seafood_Jeon).
+ all_meals(soba).
+ all_meals(soda).
+ all_meals(spinach_and_Feta_Borek).
+ all_meals(stuffed_Leaves).
+ all_meals(sushi).
+ all_meals(sweet_Crepes).
+ all_meals(takoyaki).
+ all_meals(tamales).
+ all_meals(temaki).
+ all_meals(tiramisu).
+ all_meals(tonkatsu).
+ all_meals(tortellini).
+ dinner(X) :- all_meals(X).
+ dinner(barbecue_Ribs).
+ dinner(bellini).
+ dinner(bitterballen).
+ dinner(bratwurst).
+ dinner(bruschetta).
+ dinner(burger).
+ dinner(butter_Chicken).
+ dinner(carpaccio).
+ dinner(ceviche).
+ dinner(cheese_Fondue).
+ dinner(chicken).
+ dinner(clam_Chowder).
+ dinner(cordon_Bleu).
+ dinner(curry).
+ dinner(dumplings).
+ dinner(enchilladas).
+ dinner(escargot).
+ dinner(fajita).
+ dinner(fondue).
+ dinner(fried_Chicken).
+ dinner(frikadellen).
+ dinner(gazpacho).
+ dinner(gluhwein).
+ dinner(gnocchi).
+ dinner(kasespatzle).
+ dinner(lasagna).
+ dinner(lobster).
+ dinner(mango_Lassi).
+ dinner(margarita).
+ dinner(martini).
+ dinner(maryland_Crabs).
+ dinner(matjes).
+ dinner(meatballs).
+ dinner(mojito).
+ dinner(moscow_Mule).
+ dinner(onion_soup).
+ dinner(paella).
+ dinner(papadam).
+ dinner(potatoes_Au_Gratin).
+ dinner(quiche_Lorraine).
+ dinner(ratatouille).
+ dinner(risotto).
+ dinner(sake).
+ dinner(salad).
+ dinner(savory_Crepes).
+ dinner(schnitzel).
+ dinner(soup).
+ dinner(spaghetti_Bolognese).
+ dinner(steak).
+ dinner(tacos).
+ dinner(tandoori_Chicken).
+ dinner(tapas).
+ dinner(turkey).
+ dinner(udon).
+ dinner(vegetable_Curry).
+ dinner(whiskey).
+ dinner(wine).
+ lunch(X)  :- all_meals(X).
+ lunch(arancini).
+ lunch(bellini).
+ lunch(bitterballen).
+ lunch(bloody_Mary).
+ lunch(blt).
+ lunch(bratwurst).
+ lunch(bruschetta).
+ lunch(burger).
+ lunch(butter_Chicken).
+ lunch(calzone).
+ lunch(caprese_Salad).
+ lunch(chicken).
+ lunch(chips_and_Guacamole).
+ lunch(clam_Chowder).
+ lunch(curry).
+ lunch(currywurst).
+ lunch(doner).
+ lunch(dumplings).
+ lunch(empanadas).
+ lunch(fried_Chicken).
+ lunch(frikadellen).
+ lunch(gazpacho).
+ lunch(kasespatzle).
+ lunch(loempia).
+ lunch(mango_Lassi).
+ lunch(meatballs).
+ lunch(mimosas).
+ lunch(mince_Borek).
+ lunch(onigiri).
+ lunch(onion_soup).
+ lunch(papadam).
+ lunch(potatoes_Au_Gratin).
+ lunch(quesadilla).
+ lunch(quiche_Lorraine).
+ lunch(ratatouille).
+ lunch(risotto).
+ lunch(salad).
+ lunch(spaghetti_Bolognese).
+ lunch(spinach_and_Feta_Borek).
+ lunch(tacos).
+ lunch(tandoori_Chicken).
+ lunch(tteokbokki).
+ lunch(tteokbokki).
+ lunch(vegetable_Curry).
+ night(X)  :- all_meals(X).
+ night(cocktails).
+ night(margarita).
+ night(martini).
+ night(mojito).
+ night(moscow_Mule).
+ night(sake).
+ night(tequila).
+ night(tequila_Sunrise).
+ night(whiskey).
+ night(wine).
+ % Children existence relations
+ children(baklava).
+ children(banana_Split).
+ children(baquette_with_Spread).
+ children(barbecue_Ribs).
+ children(bingsu).
+ children(blt).
+ children(borek).
+ children(bratwurst).
+ children(brownies).
+ children(buffalo_Wings).
+ children(buffet).
+ children(burger).
+ children(burrito).
+ children(butter_Chicken).
+ children(cheesecake).
+ children(chicken).
+ children(chips).
+ children(chips_and_Guacamole).
+ children(chocolate_Fondue).
+ children(churros).
+ children(cider_Donuts).
+ children(clam_Chowder).
+ children(cordon_Bleu).
+ children(corn_Dogs).
+ children(crackers).
+ children(creme_Brulee).
+ children(cupcakes).
+ children(currywurst).
+ children(dango).
+ children(deep_Dish_Pizza).
+ children(doner).
+ children(dumplings).
+ children(eclair).
+ children(empanadas).
+ children(enchilladas).
+ children(fried_Chicken).
+ children(fried_Dough).
+ children(fried_Rice).
+ children(fries).
+ children(frikadellen).
+ children(gelato).
+ children(gyoza).
+ children(hot_Dogs).
+ children(ice_Cream).
+ children(kaiserschmarrn).
+ children(kasespatzle).
+ children(kebab).
+ children(lamb_Wrap).
+ children(mac_and_Cheese).
+ children(macaron).
+ children(manti).
+ children(meatballs).
+ children(mince_Borek).
+ children(mocktail).
+ children(naan).
+ children(nachos).
+ children(nachos).
+ children(nutsmix).
+ children(onion_Rings).
+ children(onion_soup).
+ children(pad_Thai).
+ children(peanuts).
+ children(pie).
+ children(pizza).
+ children(popcorn).
+ children(potatoes_Au_Gratin).
+ children(profiteroles).
+ children(pudding).
+ children(quesadilla).
+ children(quiche_Lorraine).
+ children(ravioli).
+ children(rote_Grutze).
+ children(savory_Crepes).
+ children(schnitzel).
+ children(soda).
+ children(spaghetti_Bolognese).
+ children(spinach_and_Feta_Borek). children(stuffed_Leaves).
+ children(sweet_Crepes).
+ children(tacos).
+ children(temaki).
+ children(tiramisu).
+ children(tortellini).
+ children(tteokbokki).
  
  
  
@@ -889,21 +1054,14 @@
  
  
  % Vegan / Vegetarian / Dairy_free / nut allergy / none
- % dairy(X)      :- appetizers(X).
- % dairy(X)      :- drink(X), dif(X, mango_Lassi).
- % dairy(X)      :- snacks(X).
- % nuts(X)       :- appetizers(X).
- % nuts(X)       :- dessert(X).
- % nuts(X)       :- drink(X).
- % nuts(X)       :- snacks(X), dif(X, nutsmix).
- % vegan(X)      :- drink(X).
- % vegetarian(X) :- drink(X).
- % vegetarian(X) :- vegan(X).
  :- discontiguous dairy/1.
  :- discontiguous none/1.
  :- discontiguous nuts/1.
  :- discontiguous vegan/1.
  :- discontiguous vegetarian/1.
+ dairy(X)      :- appetizers(X).
+ dairy(X)      :- drink(X), dif(X, mango_Lassi).
+ dairy(X)      :- snacks(X).
  dairy(baklava).
  dairy(baquette_with_Spread).
  dairy(barbecue_Ribs).
@@ -945,6 +1103,10 @@
  dairy(tonkatsu).
  dairy(turkey).
  dairy(vegetable_Curry).
+ nuts(X)       :- appetizers(X).
+ nuts(X)       :- dessert(X).
+ nuts(X)       :- drink(X).
+ nuts(X)       :- snacks(X), dif(X, nutsmix).
  nuts(banana_Split).
  nuts(baquette_with_Spread).
  nuts(barbecue_Ribs).
@@ -1015,6 +1177,7 @@
  nuts(tonkatsu).
  nuts(turkey).
  nuts(udon).
+ vegan(X)      :- drink(X).
  vegan(bruschetta).
  vegan(caponata).
  vegan(crackers).
@@ -1035,6 +1198,8 @@
  vegan(tteokbokki).
  vegan(udon).
  vegan(vegetable_Curry).
+ vegetarian(X) :- drink(X).
+ vegetarian(X) :- vegan(X).
  vegetarian(arancini).
  vegetarian(banana_Split).
  vegetarian(baquette_with_Spread).
@@ -1077,169 +1242,216 @@
  
  
  
- % Dish Type (Either Main, Snack, App., Drink)
- appetizers(arancini).
- appetizers(baquette_with_Spread).
- appetizers(bitterballen).
- appetizers(brie).
- appetizers(bruschetta).
- appetizers(caprese_Salad).
- appetizers(carpaccio).
- appetizers(ceviche).
- appetizers(charcuterie).
- appetizers(cheese_Fondue).
- appetizers(chips_and_Guacamole).
- appetizers(clam_Chowder).
- appetizers(dumplings).
- appetizers(empanadas).
- appetizers(escargot).
- appetizers(fajita).
- appetizers(fried_Plantains).
- appetizers(gazpacho).
- appetizers(gyoza).
- appetizers(lentil_Soup).
- appetizers(loempia).
- appetizers(meatballs).
- appetizers(miso_Soup).
- appetizers(nachos).
- appetizers(onigiri).
- appetizers(onion_soup).
- appetizers(papadam).
- appetizers(potatoes_Au_Gratin).
- appetizers(prosciutto_and_Melon).
- appetizers(quesadilla).
- appetizers(salad).
- appetizers(soup).
- appetizers(stuffed_Leaves).
- appetizers(temaki).
- appetizers(tteokbokki).
- dessert(baklava).
- dessert(banana_Split).
- dessert(bingsu).
- dessert(brownies).
- dessert(cheesecake).
- dessert(chocolate_Fondue).
- dessert(churros).
- dessert(cider_Donuts).
- dessert(creme_Brulee).
- dessert(cupcakes).
- dessert(dango).
- dessert(eclair).
- dessert(flan).
- dessert(fried_Dough).
- dessert(gelato).
- dessert(gulab_Jamun).
- dessert(ice_Cream).
- dessert(kaiserschmarrn).
- dessert(macaron).
- dessert(pie).
- dessert(profiteroles).
- dessert(pudding).
- dessert(rote_Grutze).
- dessert(sweet_Crepes).
- dessert(tiramisu).
- drink(beer).
- drink(bellini).
- drink(bloody_Mary).
- drink(champagne).
- drink(cocktails).
- drink(cosmopolitan).
- drink(gluhwein).
- drink(mango_Lassi).
- drink(margarita).
- drink(martini).
- drink(mimosas).
- drink(mocktail).
- drink(mojito).
- drink(moscow_Mule).
- drink(open_Bar).
- drink(pina_Colada).
- drink(sake).
- drink(sangria).
- drink(soda).
- drink(tequila).
- drink(tequila_Sunrise).
- drink(whiskey).
- drink(wine).
- main_dish(barbecue_Ribs).
- main_dish(blt).
- main_dish(bratwurst).
- main_dish(buffet).
- main_dish(burger).
- main_dish(burrito).
- main_dish(butter_Chicken).
- main_dish(calzone).
- main_dish(caponata).
- main_dish(chicken).
- main_dish(chili).
- main_dish(cordon_Bleu).
- main_dish(curry).
- main_dish(currywurst).
- main_dish(deep_Dish_Pizza).
- main_dish(donburi).
- main_dish(doner).
- main_dish(enchilladas).
- main_dish(fajita).
- main_dish(fondue).
- main_dish(fried_Chicken).
- main_dish(fried_Rice).
- main_dish(frikadellen).
- main_dish(gnocchi).
- main_dish(hot_Dogs).
- main_dish(hot_Pot).
- main_dish(japchae).
- main_dish(kasespatzle).
- main_dish(kebab).
- main_dish(lahmacun).
- main_dish(laksa).
- main_dish(lamb_Wrap).
- main_dish(lasagna).
- main_dish(lobster).
- main_dish(mac_and_Cheese).
- main_dish(manti).
- main_dish(maryland_Crabs).
- main_dish(matjes).
- main_dish(pad_Thai).
- main_dish(paella).
- main_dish(pizza).
- main_dish(quesadilla).
- main_dish(quiche_Lorraine).
- main_dish(ramen).
- main_dish(ratatouille).
- main_dish(ravioli).
- main_dish(risotto).
- main_dish(savory_Crepes).
- main_dish(schnitzel).
- main_dish(seafood_Jeon).
- main_dish(soba).
- main_dish(spaghetti_Bolognese).
- main_dish(steak).
- main_dish(sushi).
- main_dish(tacos).
- main_dish(tamales).
- main_dish(tandoori_Chicken).
- main_dish(tapas).
- main_dish(tonkatsu).
- main_dish(tortellini).
- main_dish(tteokbokki).
- main_dish(turkey).
- main_dish(udon).
- main_dish(vegetable_Curry).
- snacks(borek).
- snacks(buffalo_Wings).
- snacks(chips).
- snacks(chips_and_Guacamole).
- snacks(corn_Dogs).
- snacks(crackers).
- snacks(falafel).
- snacks(fries).
- snacks(mince_Borek).
- snacks(naan).
- snacks(nachos).
- snacks(nutsmix).
- snacks(onion_Rings). snacks(peanuts).
- snacks(popcorn).
- snacks(samosas).
- snacks(spinach_and_Feta_Borek).
- snacks(takoyaki).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ %
+ % Cuisine
+ % mexican(X)  :- american(X).
+ % spanish(X)  :- italian(X).   
+ :- discontiguous american/1.
+ :- discontiguous any_cuisine/1.
+ :- discontiguous asian/1.
+ :- discontiguous french/1.
+ :- discontiguous german/1.
+ :- discontiguous indian/1.
+ :- discontiguous italian/1.
+ :- discontiguous japanese/1.
+ :- discontiguous mexican/1.
+ :- discontiguous spanish/1.
+ :- discontiguous spanish/1.
+ :- discontiguous turkish/1.
+ american(X) :- any_cuisine(X).
+ american(banana_Split).
+ american(barbecue_Ribs).
+ american(blt).
+ american(blt).
+ american(brownies).
+ american(buffalo_Wings).
+ american(burger).
+ american(cider_Donuts).
+ american(clam_Chowder).
+ american(corn_Dogs).
+ american(cosmopolitan).
+ american(deep_Dish_Pizza).
+ american(fried_Chicken).
+ american(fried_Dough).
+ american(hot_Dogs).
+ american(mac_and_Cheese).
+ american(maryland_Crabs).
+ american(onion_Rings).
+ americans(X) :- italian(X).
+ americans(X) :- mexican(X).
+ americans(X) :- spanish(X).
+ any_cuisine(beer).
+ any_cuisine(buffet).
+ any_cuisine(champagne).
+ any_cuisine(cheese_Fondue).
+ any_cuisine(cheesecake).
+ any_cuisine(chicken).
+ any_cuisine(chips).
+ any_cuisine(chocolate_Fondue).
+ any_cuisine(cocktails).
+ any_cuisine(crackers).
+ any_cuisine(cupcakes).
+ any_cuisine(fondue).
+ any_cuisine(fries).
+ any_cuisine(ice_Cream).
+ any_cuisine(lobster).
+ any_cuisine(martini).
+ any_cuisine(mimosas).
+ any_cuisine(mocktail).
+ any_cuisine(moscow_Mule).
+ any_cuisine(nutsmix).
+ any_cuisine(open_Bar).
+ any_cuisine(peanuts).
+ any_cuisine(pie).
+ any_cuisine(popcorn).
+ any_cuisine(pudding).
+ any_cuisine(salad).
+ any_cuisine(soda).
+ any_cuisine(soup).
+ any_cuisine(steak).
+ any_cuisine(turkey).
+ any_cuisine(whiskey).
+ any_cuisine(wine).
+ asian(X)    :- any_cuisine(X).
+ asian(X)    :- indian(X).
+ asian(X)    :- japanese(X).
+ asian(baklava).
+ asian(bingsu).
+ asian(curry).
+ asian(dumplings).
+ asian(fried_Rice).
+ asian(hot_Pot).
+ asian(japchae).
+ asian(laksa).
+ asian(loempia).
+ asian(pad_Thai).
+ asian(seafood_Jeon).
+ asian(tteokbokki).
+ asian(tteokbokki).
+ dutch(bitterballen).
+ european(X) :- french(X).
+ european(X) :- german(X).
+ european(X) :- italian(X).
+ european(X) :- spanish(X).
+ french(X)   :- any_cuisine(X).
+ french(baquette_with_Spread).
+ french(bloody_Mary).
+ french(brie).
+ french(charcuterie).
+ french(creme_Brulee).
+ french(eclair).
+ french(escargot).
+ french(macaron).
+ french(onion_soup).
+ french(potatoes_Au_Gratin).
+ french(profiteroles).
+ french(quiche_Lorraine).
+ french(ratatouille).
+ french(savory_Crepes).
+ french(sweet_Crepes).
+ german(X)   :- american(X).
+ german(X)   :- any_cuisine(X).
+ german(bratwurst).
+ german(cordon_Bleu).
+ german(currywurst).
+ german(frikadellen).
+ german(gluhwein).
+ german(kaiserschmarrn).
+ german(kasespatzle).
+ german(matjes).
+ german(rote_grutze).
+ german(schnitzel).
+ indian(X)   :- any_cuisine(X).
+ indian(butter_Chicken).
+ indian(curry).
+ indian(gulab_Jamun).
+ indian(mango_Lassi).
+ indian(naan).
+ indian(papadam).
+ indian(samosas).
+ indian(tandoori_Chicken).
+ indian(vegetable_Curry).
+ italian(X)  :- any_cuisine(X).
+ italian(X)  :- spanish(X).
+ italian(arancini).
+ italian(bellini).
+ italian(bruschetta).
+ italian(calzone).
+ italian(caponata).
+ italian(caprese_Salad).
+ italian(carpaccio).
+ italian(gelato).
+ italian(gnocchi).
+ italian(lasagna).
+ italian(paella).
+ italian(pizza).
+ italian(prosciutto_and_Melon).
+ italian(ravioli).
+ italian(risotto).
+ italian(spaghetti_Bolognese).
+ italian(spaghetti_and_Meatballs).
+ italian(tiramisu).
+ italian(tortellini).
+ japanese(X) :- any_cuisine(X).
+ japanese(dango).
+ japanese(donburi).
+ japanese(gyoza).
+ japanese(miso_Soup).
+ japanese(onigiri).
+ japanese(ramen).
+ japanese(sake).
+ japanese(soba).
+ japanese(sushi).
+ japanese(takoyaki).
+ japanese(temaki).
+ japanese(tonkatsu).
+ japanese(udon).
+ mexican(X)  :- any_cuisine(X).
+ mexican(burrito).
+ mexican(ceviche).
+ mexican(chili).
+ mexican(chips_and_Guacamole).
+ mexican(empanadas).
+ mexican(enchilladas).
+ mexican(fajita).
+ mexican(fried_Plantains).
+ mexican(margarita).
+ mexican(nachos).
+ mexican(nachos).
+ mexican(pina_Colada).
+ mexican(quesadilla).
+ mexican(quesadilla).
+ mexican(tacos).
+ mexican(tamales).
+ mexican(tequila).
+ mexican(tequila_Sunrise).
+ spanish(X)  :- any_cuisine(X).
+ spanish(churros).
+ spanish(flan).
+ spanish(gazpacho).
+ spanish(mojito).
+ spanish(sangria).
+ spanish(tapas).
+ turkish(X)  :- any_cuisine(X).
+ turkish(borek).
+ turkish(doner).
+ turkish(falafel). turkish(kebab).
+ turkish(lahmacun).
+ turkish(lamb_Wrap).
+ turkish(lentil_Soup).
+ turkish(manti).
+ turkish(mince_Borek).
+ turkish(spinach_and_Feta_Borek).
+ turkish(stuffed_Leaves).
  

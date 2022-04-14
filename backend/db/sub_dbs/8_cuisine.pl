@@ -1,5 +1,4 @@
 % Cuisine
-
 :- discontiguous italian/1.
 :- discontiguous asian/1.
 :- discontiguous indian/1.
@@ -13,40 +12,40 @@
 :- discontiguous spanish/1.
 :- discontiguous german/1.
 
-% mexican(X)  :- any_cuisine(X).
-% % mexican(X)  :- american(X).
+mexican(X)  :- any_cuisine(X).
+% mexican(X)  :- american(X).
 
-% american(X) :- any_cuisine(X).
+american(X) :- any_cuisine(X).
 
-% americans(X) :- mexican(X).
-% americans(X) :- italian(X).
-% americans(X) :- spanish(X).
+americans(X) :- mexican(X).
+americans(X) :- italian(X).
+americans(X) :- spanish(X).
 
-% italian(X)  :- any_cuisine(X).
-% italian(X)  :- spanish(X).
+italian(X)  :- any_cuisine(X).
+italian(X)  :- spanish(X).
 
-% asian(X)    :- any_cuisine(X).
-% asian(X)    :- japanese(X).
-% asian(X)    :- indian(X).
+asian(X)    :- any_cuisine(X).
+asian(X)    :- japanese(X).
+asian(X)    :- indian(X).
 
-% european(X) :- german(X).
-% european(X) :- french(X).
-% european(X) :- spanish(X).
-% european(X) :- italian(X).
+european(X) :- german(X).
+european(X) :- french(X).
+european(X) :- spanish(X).
+european(X) :- italian(X).
 
-% spanish(X)  :- any_cuisine(X).
-% % spanish(X)  :- italian(X).   
+spanish(X)  :- any_cuisine(X).
+% spanish(X)  :- italian(X).   
 
-% german(X)   :- any_cuisine(X).
-% german(X)   :- american(X).
+german(X)   :- any_cuisine(X).
+german(X)   :- american(X).
 
-% turkish(X)  :- any_cuisine(X).
+turkish(X)  :- any_cuisine(X).
 
-% indian(X)   :- any_cuisine(X).
+indian(X)   :- any_cuisine(X).
 
-% japanese(X) :- any_cuisine(X).
+japanese(X) :- any_cuisine(X).
 
-% french(X)   :- any_cuisine(X).
+french(X)   :- any_cuisine(X).
 
 mexican(tacos).
 american(burger).

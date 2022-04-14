@@ -4,8 +4,8 @@
 :- discontiguous summer/1.
 :- discontiguous both_seasons/1.
 
-% winter(X) :- both_seasons(X).
-% summer(X) :- both_seasons(X).
+winter(X) :- both_seasons(X).
+summer(X) :- both_seasons(X).
 
 both_seasons(tacos).
 both_seasons(burger).

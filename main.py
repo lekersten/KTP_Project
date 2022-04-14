@@ -17,7 +17,7 @@ app.add_middleware(
 )
 
 app.mount("/frontend", StaticFiles(directory="frontend"), name="frontend")
-prolog_main = PrologUtil('backend/db/kb.pl')
+prolog_main = PrologUtil('backend/db/combined.pl')
 
 
 @app.get("/")

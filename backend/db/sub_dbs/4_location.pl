@@ -4,8 +4,8 @@
 :- discontiguous anywhere/1.
 :- discontiguous outdoor/1.
 
-% outdoor(X) :- anywhere(X).
-% indoor(X)  :- anywhere(X).
+outdoor(X) :- anywhere(X).
+indoor(X)  :- anywhere(X).
 
 anywhere(tacos).
 anywhere(burger).
