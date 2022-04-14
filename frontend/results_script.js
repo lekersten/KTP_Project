@@ -45,6 +45,35 @@ function get_menu_item(item_str, vegan = false, vegetarian = false) {
     // Processes the selected item
     const selected_item = process_menu_item(selected_item_prototype);
 
+    if (item_str == "drink") {
+        const path = window.location.pathname;
+        const page = path.split("/").pop();
+        const modifiedPage = page.substring(0, page.indexOf(".html"));
+
+        // Process party drinks
+        if (modifiedPage == "party") {
+            let drink_1_item = process_menu_item(select_item(parsed_data));
+            if (parsed_data.length > 1) {
+                while (drink_1_item == selected_item) {
+                    drink_1_item = process_menu_item(select_item(parsed_data));
+                }
+            }
+            document.getElementById("drink_1").innerHTML = drink_1_item;
+            document.getElementById("drink_1").textContent = drink_1_item;
+            document.getElementById("drink_1").href = "https://www.google.com/search?q=" + process_href(drink_1_item);
+
+            let drink_2_item = process_menu_item(select_item(parsed_data));
+            if (parsed_data.length > 2) {
+                while (drink_2_item == selected_item || drink_2_item == drink_1_item) {
+                    drink_2_item = process_menu_item(select_item(parsed_data));
+                }
+            }
+            document.getElementById("drink_2").innerHTML = drink_2_item;
+            document.getElementById("drink_2").textContent = drink_2_item;
+            document.getElementById("drink_2").href = "https://www.google.com/search?q=" + process_href(drink_2_item);
+        }
+    }
+
     // Check if vegan
     if (vegan) {
         const checked_item = "Vegan " + selected_item;
@@ -81,7 +110,11 @@ function get_menu_item(item_str, vegan = false, vegetarian = false) {
 
 // Processes the Google search query for href
 function process_href(menu_item) {
-    return menu_item.replaceAll(" ", "+");
+    if (menu_item.includes(" ")) {
+        return menu_item.replaceAll(" ", "+");
+    } else {
+        return menu_item;
+    }
 }
 
 // Changes the "See Results/Refresh Results" Button
@@ -174,6 +207,10 @@ function capitalizeFirstLetter(string) {
 
 // Processes the menu items before display
 function process_menu_item(menu_item) {
-    return capitalizeFirstLetter(menu_item.replaceAll("_", " "));
+    if (menu_item.includes("_")) {
+        return capitalizeFirstLetter(menu_item.replaceAll("_", " "));
+    } else {
+        return capitalizeFirstLetter(menu_item);
+    }
 }
 
