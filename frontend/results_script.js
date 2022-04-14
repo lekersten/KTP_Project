@@ -121,19 +121,6 @@ function change_cuisine() {
     document.getElementById("cuisine").textContent = cuisine;
 }
 
-function get_buffet_choices(buffet) {
-    switch (buffet) {
-        case "get_together":
-            return "A Buffet Including: Meatballs, Sausages, Chicken Wings, Fries, Salad";
-        case "party":
-            return "A Buffet Including: Chips and Dip, Cookies, Bitterballen, Hamburgers, Pizza, Carrots and Hummus";
-        case "fancy":
-            return "A Buffet Including: Shrimp Cocktail, Oysters, Soup, Roasted Duck and Vegetables, Sushi";
-        default:
-            return "As  the user, you should not be able to see this. If you are, either you or I did something very wrong."
-    }
-}
-
 // Randomly selects an item from the parsed results array
 function select_item(parsed_results_array) {
     const randomElement = parsed_results_array[Math.floor(Math.random() * parsed_results_array.length)];
