@@ -1,7 +1,6 @@
 % Children existence relations
 children(tacos).
 children(burger).
-children(chicken).
 children(pizza).
 children(soda).
 children(mocktail).
@@ -82,3 +81,4 @@ children(dango).
 children(nachos).
 children(mince_Borek).
 children(spinach_and_Feta_Borek).
+children(ayran).

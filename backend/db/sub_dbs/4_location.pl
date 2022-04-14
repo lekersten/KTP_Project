@@ -7,7 +7,6 @@ anywhere(tacos).
 anywhere(burger).
 indoor(risotto).
 indoor(curry).
-indoor(chicken).
 anywhere(lobster).
 indoor(steak).
 indoor(lasagna).
@@ -70,7 +69,8 @@ anywhere(mince_Borek).
 anywhere(spinach_and_Feta_Borek).
 anywhere(lamb_Wrap).
 
-anywhere(wine).
+anywhere(red_Wine).
+anywhere(white_Wine).
 anywhere(beer).
 anywhere(soda).
 anywhere(mocktail).
@@ -93,6 +93,8 @@ anywhere(moscow_Mule).
 anywhere(tequila_Sunrise).
 anywhere(tequila).
 anywhere(sangria).
+anywhere(ayran).
+anywhere(tea).
 
 anywhere(loempia).
 anywhere(meatballs).

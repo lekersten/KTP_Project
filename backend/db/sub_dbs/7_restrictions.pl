@@ -2,7 +2,7 @@
 
 vegan(X)      :- drink(X).
 vegetarian(X) :- drink(X).
-dairy(X)      :- drink(X), dif(X, mango_Lassi).
+dairy(X)      :- drink(X), dif(X, mango_Lassi), dif(X, ayran).
 dairy(X)      :- snacks(X).
 dairy(X)      :- appetizers(X).
 nuts(X)       :- drink(X).
@@ -70,7 +70,6 @@ vegetarian(nachos).
 
 dairy(burger).
 dairy(tacos).
-dairy(chicken).
 dairy(curry).
 dairy(lobster).
 dairy(steak).
@@ -113,7 +112,6 @@ dairy(temaki).
 nuts(tacos).
 nuts(burger).
 nuts(risotto).
-nuts(chicken).
 nuts(lobster).
 nuts(steak).
 nuts(turkey).

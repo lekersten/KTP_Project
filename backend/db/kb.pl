@@ -1297,6 +1297,7 @@ asian(X)    :- any_cuisine(X).
 asian(X)    :- japanese(X).
 asian(X)    :- indian(X).
 
+european(X) :- turkish(X).
 european(X) :- german(X).
 european(X) :- french(X).
 european(X) :- spanish(X).

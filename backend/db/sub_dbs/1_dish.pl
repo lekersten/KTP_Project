@@ -9,7 +9,6 @@ main_dish(lasagna).
 main_dish(pizza).
 main_dish(tapas).
 main_dish(turkey).
-main_dish(chicken).
 main_dish(enchilladas).
 main_dish(ramen).
 main_dish(sushi).
@@ -65,7 +64,8 @@ main_dish(deep_Dish_Pizza).
 main_dish(bLT).
 
 
-drink(wine).
+drink(white_Wine).
+drink(red_Wine).
 drink(beer).
 drink(soda).
 drink(mocktail).
@@ -88,6 +88,8 @@ drink(moscow_Mule).
 drink(tequila_Sunrise).
 drink(tequila).
 drink(sangria).
+drink(ayran).
+drink(tea).
 
 appetizers(loempia).
 appetizers(meatballs).

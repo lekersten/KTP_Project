@@ -8,7 +8,6 @@ both_seasons(burger).
 winter(enchilladas).
 winter(risotto).
 winter(curry).
-both_seasons(chicken).
 summer(lobster).
 both_seasons(steak).
 winter(lasagna).
@@ -70,7 +69,8 @@ summer(maryland_Crabs).
 both_seasons(deep_Dish_Pizza).
 both_seasons(bLT).
 
-both_seasons(wine).
+winter(red_Wine).
+summer(white_Wine).
 both_seasons(beer).
 both_seasons(soda).
 both_seasons(mocktail).
@@ -93,6 +93,8 @@ both_seasons(moscow_Mule).
 summer(tequila_Sunrise).
 both_seasons(tequila).
 both_seasons(sangria).
+winter(tea).
+summer(ayran).
 
 both_seasons(loempia).
 both_seasons(meatballs).

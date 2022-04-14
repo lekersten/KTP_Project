@@ -64,6 +64,7 @@
  dessert(rote_Grutze).
  dessert(sweet_Crepes).
  dessert(tiramisu).
+ drink(ayran).
  drink(beer).
  drink(bellini).
  drink(bloody_Mary).
@@ -80,13 +81,15 @@
  drink(moscow_Mule).
  drink(open_Bar).
  drink(pina_Colada).
+ drink(red_Wine).
  drink(sake).
  drink(sangria).
  drink(soda).
+ drink(tea).
  drink(tequila).
  drink(tequila_Sunrise).
  drink(whiskey).
- drink(wine).
+ drink(white_Wine).
  main_dish(bLT).
  main_dish(barbecue_Ribs).
  main_dish(bratwurst).
@@ -96,7 +99,6 @@
  main_dish(butter_Chicken).
  main_dish(calzone).
  main_dish(caponata).
- main_dish(chicken).
  main_dish(chili).
  main_dish(cordon_Bleu).
  main_dish(curry).
@@ -251,6 +253,7 @@
  fancy(quiche_Lorraine).
  fancy(ratatouille).
  fancy(ravioli).
+ fancy(red_Wine).
  fancy(rote_Grutze).
  fancy(sake).
  fancy(salad).
@@ -270,7 +273,8 @@
  fancy(udon).
  fancy(vegetable_Curry).
  fancy(whiskey).
- fancy(wine).
+ fancy(white_Wine).
+ get_together(ayran).
  get_together(bLT).
  get_together(barbecue_Ribs).
  get_together(beer).
@@ -283,7 +287,6 @@
  get_together(butter_Chicken).
  get_together(calzone).
  get_together(caponata).
- get_together(chicken).
  get_together(chili).
  get_together(chips_and_Guacamole).
  get_together(cordon_Bleu).
@@ -328,6 +331,7 @@
  get_together(quiche_Lorraine).
  get_together(ramen).
  get_together(ravioli).
+ get_together(red_Wine).
  get_together(risotto).
  get_together(sake).
  get_together(samosas).
@@ -345,11 +349,13 @@
  get_together(takoyaki).
  get_together(tamales).
  get_together(tandoori_Chicken).
+ get_together(tea).
  get_together(tonkatsu).
  get_together(tortellini).
  get_together(tteokbokki).
  get_together(udon).
  get_together(vegetable_Curry).
+ get_together(white_Wine).
  party(beer).
  party(borek).
  party(bratwurst).
@@ -375,6 +381,7 @@
  party(pina_Colada).
  party(pizza).
  party(popcorn).
+ party(red_Wine).
  party(sake).
  party(sangria).
  party(sangria).
@@ -383,7 +390,7 @@
  party(tapas).
  party(tequila).
  party(tequila_Sunrise).
- party(wine).
+ party(white_Wine).
  
  
  
@@ -413,7 +420,6 @@
  both_seasons(champagne).
  both_seasons(charcuterie).
  both_seasons(cheese_and_Crackers).
- both_seasons(chicken).
  both_seasons(chips).
  both_seasons(chips_and_Guacamole).
  both_seasons(chocolate_Fondue).
@@ -497,9 +503,9 @@
  both_seasons(udon).
  both_seasons(vegetable_Curry).
  both_seasons(whiskey).
- both_seasons(wine).
  margarita(margarita).
  summer(X) :- both_seasons(X).
+ summer(ayran).
  summer(banana_Split).
  summer(barbecue_Ribs).
  summer(bingsu).
@@ -530,6 +536,7 @@
  summer(tapas).
  summer(temaki).
  summer(tequila_Sunrise).
+ summer(white_Wine).
  winter(X) :- both_seasons(X).
  winter(brownies).
  winter(cheese_Fondue).
@@ -551,10 +558,12 @@
  winter(paella).
  winter(quiche_Lorraine).
  winter(ramen).
+ winter(red_Wine).
  winter(risotto).
  winter(samosas).
  winter(soup).
  winter(tandoori_Chicken).
+ winter(tea).
  winter(turkey).
  
  
@@ -565,6 +574,7 @@
  
  % Where relation
  anywhere(arancini).
+ anywhere(ayran).
  anywhere(bLT).
  anywhere(baklava).
  anywhere(banana_Split).
@@ -669,6 +679,7 @@
  anywhere(quesadilla).
  anywhere(quiche_Lorraine).
  anywhere(ratatouille).
+ anywhere(red_Wine).
  anywhere(rote_Grutze).
  anywhere(sake).
  anywhere(salad).
@@ -689,6 +700,7 @@
  anywhere(tamales).
  anywhere(tandoori_Chicken).
  anywhere(tapas).
+ anywhere(tea).
  anywhere(temaki).
  anywhere(tequila).
  anywhere(tequila_Sunrise).
@@ -698,13 +710,12 @@
  anywhere(tteokbokki).
  anywhere(vegetable_Curry).
  anywhere(whiskey).
- anywhere(wine).
+ anywhere(white_Wine).
  indoor(X)  :- anywhere(X).
  indoor(calzone).
  indoor(caprese_Salad).
  indoor(ceviche).
  indoor(cheese_Fondue).
- indoor(chicken).
  indoor(chili).
  indoor(curry).
  indoor(enchilladas).
@@ -825,6 +836,7 @@
  all_meals(tiramisu).
  all_meals(tonkatsu).
  all_meals(tortellini).
+ all_meals(white_Wine).
  dinner(X) :- all_meals(X).
  dinner(barbecue_Ribs).
  dinner(bellini).
@@ -836,7 +848,6 @@
  dinner(carpaccio).
  dinner(ceviche).
  dinner(cheese_Fondue).
- dinner(chicken).
  dinner(clam_Chowder).
  dinner(cordon_Bleu).
  dinner(curry).
@@ -867,6 +878,7 @@
  dinner(potatoes_Au_Gratin).
  dinner(quiche_Lorraine).
  dinner(ratatouille).
+ dinner(red_Wine).
  dinner(risotto).
  dinner(sake).
  dinner(salad).
@@ -882,9 +894,9 @@
  dinner(udon).
  dinner(vegetable_Curry).
  dinner(whiskey).
- dinner(wine).
  lunch(X)  :- all_meals(X).
  lunch(arancini).
+ lunch(ayran).
  lunch(bLT).
  lunch(bellini).
  lunch(bitterballen).
@@ -895,7 +907,6 @@
  lunch(butter_Chicken).
  lunch(calzone).
  lunch(caprese_Salad).
- lunch(chicken).
  lunch(chips_and_Guacamole).
  lunch(clam_Chowder).
  lunch(curry).
@@ -925,6 +936,7 @@
  lunch(spinach_and_Feta_Borek).
  lunch(tacos).
  lunch(tandoori_Chicken).
+ lunch(tea).
  lunch(tteokbokki).
  lunch(tteokbokki).
  lunch(vegetable_Curry).
@@ -934,13 +946,13 @@
  night(martini).
  night(mojito).
  night(moscow_Mule).
+ night(red_Wine).
  night(sake).
  night(tequila).
  night(tequila_Sunrise).
  night(whiskey).
- night(wine).
  % Children existence relations
- children(bLT).
+ children(ayran). children(bLT).
  children(baklava).
  children(banana_Split).
  children(baquette_with_Spread).
@@ -956,7 +968,6 @@
  children(butter_Chicken).
  children(cheese_and_Crackers).
  children(cheesecake).
- children(chicken).
  children(chips).
  children(chips_and_Guacamole).
  children(chocolate_Fondue).
@@ -1015,7 +1026,8 @@
  children(schnitzel).
  children(soda).
  children(spaghetti_Bolognese).
- children(spinach_and_Feta_Borek). children(stuffed_Leaves).
+ children(spinach_and_Feta_Borek).
+ children(stuffed_Leaves).
  children(sweet_Crepes).
  children(tacos).
  children(temaki).
@@ -1032,7 +1044,7 @@
  
  % Vegan / Vegetarian / Dairy_free / nut allergy / none
  dairy(X)      :- appetizers(X).
- dairy(X)      :- drink(X), dif(X, mango_Lassi).
+ dairy(X)      :- drink(X), dif(X, mango_Lassi), dif(X, ayran).
  dairy(X)      :- snacks(X).
  dairy(baklava).
  dairy(baquette_with_Spread).
@@ -1041,7 +1053,6 @@
  dairy(buffalo_Wings).
  dairy(burger).
  dairy(ceviche).
- dairy(chicken).
  dairy(chili).
  dairy(curry).
  dairy(currywurst).
@@ -1091,7 +1102,6 @@
  nuts(burrito).
  nuts(butter_Chicken).
  nuts(calzone).
- nuts(chicken).
  nuts(chili).
  nuts(churros).
  nuts(cider_Donuts).
@@ -1218,69 +1228,74 @@
  
  
  
- 
- 
- 
- 
- 
- 
  %
+ % AMERICANS (N & S)
+ % ASIA
  % Cuisine
- % mexican(X)  :- american(X).
- % spanish(X)  :- italian(X).   
- american(X) :- any_cuisine(X).
+ % EUROPE
+ % american(X) :- any_cuisine(X).
+ % asian(X)    :- any_cuisine(X).
+ % french(X)   :- any_cuisine(X).
+ % german(X)   :- american(X).
+ % german(X)   :- any_cuisine(X).
+ % indian(X)   :- any_cuisine(X).
+ % italian(X)  :- any_cuisine(X).
+ % italian(X)  :- spanish(X). 
+ % japanese(X) :- any_cuisine(X).
+ % mexican(X)  :- american(X). 
+ % mexican(X)  :- any_cuisine(X).
+ % spanish(X)  :- any_cuisine(X).
+ % spanish(X)  :- italian(X). 
+ % turkish(X)  :- any_cuisine(X).
+ american(X) :- americans(X).
  american(bLT).
  american(banana_Split).
  american(barbecue_Ribs).
+ american(bloody_Mary).
  american(brownies).
  american(buffalo_Wings).
  american(burger).
+ american(champagne).
+ american(cheese_and_Crackers).
+ american(cheesecake).
+ american(chips).
+ american(chocolate_Fondue).
  american(cider_Donuts).
  american(clam_Chowder).
  american(corn_Dogs).
- american(cosmopolitan).
+ american(cupcakes).
  american(deep_Dish_Pizza).
  american(fried_Chicken).
  american(fried_Dough).
+ american(fries).
  american(hot_Dogs).
+ american(lobster).
  american(mac_and_Cheese).
+ american(martini).
  american(maryland_Crabs).
+ american(mimosas).
+ american(moscow_Mule).
+ american(nutsmix).
  american(onion_Rings).
- americans(X) :- italian(X).
- americans(X) :- mexican(X).
- americans(X) :- spanish(X).
+ american(popcorn).
+ american(red_Wine).
+ american(steak).
+ american(turkey).
+ americans(cosmopolitan).
+ americans(ice_Cream).
+ americans(mojito).
+ americans(pie).
+ americans(pudding).
+ americans(whiskey).
  any_cuisine(beer).
  any_cuisine(buffet).
- any_cuisine(champagne).
- any_cuisine(cheese_Fondue).
- any_cuisine(cheese_and_Crackers).
- any_cuisine(cheesecake).
- any_cuisine(chicken).
- any_cuisine(chips).
- any_cuisine(chocolate_Fondue).
  any_cuisine(cocktails).
- any_cuisine(cupcakes).
- any_cuisine(fondue).
- any_cuisine(fries).
- any_cuisine(ice_Cream).
- any_cuisine(lobster).
- any_cuisine(martini).
- any_cuisine(mimosas).
  any_cuisine(mocktail).
- any_cuisine(moscow_Mule).
- any_cuisine(nutsmix).
  any_cuisine(open_Bar).
- any_cuisine(pie).
- any_cuisine(popcorn).
- any_cuisine(pudding).
  any_cuisine(salad).
  any_cuisine(soda).
  any_cuisine(soup).
- any_cuisine(steak).
- any_cuisine(turkey).
- any_cuisine(whiskey).
- any_cuisine(wine).
- asian(X)    :- any_cuisine(X).
+ any_cuisine(white_Wine).
  asian(X)    :- indian(X).
  asian(X)    :- japanese(X).
  asian(baklava).
@@ -1293,22 +1308,42 @@
  asian(laksa).
  asian(loempia).
  asian(pad_Thai).
+ asian(red_Wine).
  asian(seafood_Jeon).
+ asian(tea).
  asian(tteokbokki).
  asian(tteokbokki).
  dutch(bitterballen).
- european(X) :- french(X).
- european(X) :- german(X).
- european(X) :- italian(X).
- european(X) :- spanish(X).
- french(X)   :- any_cuisine(X).
+ european(champagne).
+ european(cheese_and_Crackers).
+ european(cheesecake).
+ european(chips).
+ european(chocolate_Fondue).
+ european(cosmopolitan).
+ european(cupcakes).
+ european(fries).
+ european(ice_Cream).
+ european(martini).
+ european(mimosas).
+ european(moscow_Mule).
+ european(nutsmix).
+ european(pie).
+ european(popcorn).
+ european(pudding).
+ european(red_Wine).
+ european(tea).
+ european(whiskey).
+ french(X) :- european(X).
  french(baquette_with_Spread).
  french(bloody_Mary).
  french(brie).
+ french(champagne).
  french(charcuterie).
+ french(cheese_Fondue).
  french(creme_Brulee).
  french(eclair).
  french(escargot).
+ french(fondue).
  french(macaron).
  french(onion_soup).
  french(potatoes_Au_Gratin).
@@ -1317,8 +1352,7 @@
  french(ratatouille).
  french(savory_Crepes).
  french(sweet_Crepes).
- german(X)   :- american(X).
- german(X)   :- any_cuisine(X).
+ german(X) :- european(X).
  german(bratwurst).
  german(cordon_Bleu).
  german(currywurst).
@@ -1329,7 +1363,6 @@
  german(matjes).
  german(rote_grutze).
  german(schnitzel).
- indian(X)   :- any_cuisine(X).
  indian(butter_Chicken).
  indian(curry).
  indian(gulab_Jamun).
@@ -1339,8 +1372,8 @@
  indian(samosas).
  indian(tandoori_Chicken).
  indian(vegetable_Curry).
- italian(X)  :- any_cuisine(X).
- italian(X)  :- spanish(X).
+ italian(X) :- americans(X).
+ italian(X) :- european(X).
  italian(arancini).
  italian(bellini).
  italian(bruschetta).
@@ -1360,7 +1393,6 @@
  italian(spaghetti_and_Meatballs).
  italian(tiramisu).
  italian(tortellini).
- japanese(X) :- any_cuisine(X).
  japanese(dango).
  japanese(donburi).
  japanese(gyoza).
@@ -1374,7 +1406,7 @@
  japanese(temaki).
  japanese(tonkatsu).
  japanese(udon).
- mexican(X)  :- any_cuisine(X).
+ mexican(X) :- americans(X).
  mexican(burrito).
  mexican(ceviche).
  mexican(chili).
@@ -1393,14 +1425,16 @@
  mexican(tamales).
  mexican(tequila).
  mexican(tequila_Sunrise).
- spanish(X)  :- any_cuisine(X).
+ spanish(X) :- americans(X).
+ spanish(X) :- european(X).
  spanish(churros).
  spanish(flan).
  spanish(gazpacho).
  spanish(mojito).
  spanish(sangria).
  spanish(tapas).
- turkish(X)  :- any_cuisine(X).
+ turkish(X) :- european(X).
+ turkish(ayran).
  turkish(borek).
  turkish(doner).
  turkish(falafel). turkish(kebab).

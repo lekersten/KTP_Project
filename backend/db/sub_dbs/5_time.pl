@@ -12,8 +12,6 @@ lunch(risotto).
 dinner(risotto).
 lunch(curry).
 dinner(curry).
-lunch(chicken).
-dinner(chicken).
 dinner(lobster).
 dinner(steak).
 dinner(lasagna).
@@ -86,8 +84,9 @@ lunch(mince_Borek).
 lunch(spinach_and_Feta_Borek).
 all_meals(lamb_Wrap).
 %
-dinner(wine).
-night(wine).
+dinner(red_Wine).
+night(red_Wine).
+all_meals(white_Wine).
 all_meals(beer).
 all_meals(soda).
 all_meals(mocktail).
@@ -118,6 +117,8 @@ night(moscow_Mule).
 night(tequila_Sunrise).
 night(tequila).
 all_meals(sangria).
+lunch(tea).
+lunch(ayran).
 %
 lunch(loempia).
 lunch(meatballs).

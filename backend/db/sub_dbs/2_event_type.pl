@@ -6,7 +6,6 @@ get_together(enchilladas).
 get_together(burger).
 get_together(risotto).
 get_together(curry).
-get_together(chicken).
 fancy(lobster).
 fancy(steak).
 fancy(lasagna).
@@ -85,8 +84,12 @@ fancy(maryland_Crabs).
 get_together(deep_Dish_Pizza).
 get_together(bLT).
 %
-fancy(wine).
-party(wine).
+fancy(red_Wine).
+party(red_Wine).
+get_together(red_Wine).
+fancy(white_Wine).
+party(white_Wine).
+get_together(white_Wine).
 get_together(beer).
 party(beer).
 get_together(soda).
@@ -128,6 +131,8 @@ party(tequila).
 get_together(sangria).
 party(sangria).
 party(sangria).
+get_together(tea).
+get_together(ayran).
 %
 fancy(loempia).
 fancy(meatballs).

@@ -1,63 +1,61 @@
 % Cuisine
+% AMERICANS (N & S)
+american(X) :- americans(X).
+mexican(X) :- americans(X).
 
-mexican(X)  :- any_cuisine(X).
-% mexican(X)  :- american(X).
+italian(X) :- americans(X).
+spanish(X) :- americans(X).
 
-american(X) :- any_cuisine(X).
+% EUROPE
+german(X) :- european(X).
+french(X) :- european(X).
+spanish(X) :- european(X).
+italian(X) :- european(X).
+turkish(X) :- european(X).
 
-americans(X) :- mexican(X).
-americans(X) :- italian(X).
-americans(X) :- spanish(X).
-
-italian(X)  :- any_cuisine(X).
-italian(X)  :- spanish(X).
-
-asian(X)    :- any_cuisine(X).
+% ASIA
 asian(X)    :- japanese(X).
 asian(X)    :- indian(X).
 
-european(X) :- german(X).
-european(X) :- french(X).
-european(X) :- spanish(X).
-european(X) :- italian(X).
+% german(X)   :- american(X).
+% spanish(X)  :- italian(X). 
+% mexican(X)  :- american(X). 
+% italian(X)  :- spanish(X). 
 
-spanish(X)  :- any_cuisine(X).
-% spanish(X)  :- italian(X).   
-
-german(X)   :- any_cuisine(X).
-german(X)   :- american(X).
-
-turkish(X)  :- any_cuisine(X).
-
-indian(X)   :- any_cuisine(X).
-
-japanese(X) :- any_cuisine(X).
-
-french(X)   :- any_cuisine(X).
+% asian(X)    :- any_cuisine(X).
+% german(X)   :- any_cuisine(X).
+% spanish(X)  :- any_cuisine(X).
+% turkish(X)  :- any_cuisine(X).
+% indian(X)   :- any_cuisine(X).
+% japanese(X) :- any_cuisine(X).
+% french(X)   :- any_cuisine(X).
+% american(X) :- any_cuisine(X).
+% mexican(X)  :- any_cuisine(X).
+% italian(X)  :- any_cuisine(X).
 
 mexican(tacos).
 american(burger).
 italian(risotto).
 indian(curry).
 asian(curry).
-any_cuisine(chicken).
-any_cuisine(lobster).
-any_cuisine(steak).
+american(lobster).
+american(steak).
 italian(lasagna).
-any_cuisine(turkey).
+american(turkey).
 italian(pizza).
 spanish(tapas).
 mexican(enchilladas).
 japanese(ramen).
 japanese(sushi).
-any_cuisine(fondue).
+
+any_cuisine(buffet).
+french(fondue).
 turkish(doner).
 asian(pad_Thai).
 asian(fried_Rice).
 german(schnitzel).
 german(currywurst).
 german(matjes).
-any_cuisine(buffet).
 french(savory_Crepes).
 italian(spaghetti_Bolognese).
 indian(tandoori_Chicken).
@@ -104,39 +102,54 @@ turkish(spinach_and_Feta_Borek).
 turkish(lamb_Wrap).
 
 %
-any_cuisine(wine).
+american(red_Wine).
+asian(red_Wine).
+european(red_Wine).
+any_cuisine(white_Wine).
 any_cuisine(beer).
 any_cuisine(soda).
 any_cuisine(mocktail).
 any_cuisine(cocktails).
-any_cuisine(whiskey).
+americans(whiskey).
+european(whiskey).
+any_cuisine(open_Bar).
 mexican(margarita).
 indian(mango_Lassi).
 german(gluhwein).
-any_cuisine(champagne).
-any_cuisine(mimosas).
+american(champagne).
+european(champagne).
+french(champagne).
+american(mimosas).
+european(mimosas).
 japanese(sake).
 spanish(mojito).
-any_cuisine(martini).
+americans(mojito).
+american(martini).
+european(martini).
 french(bloody_Mary).
+american(bloody_Mary).
 mexican(pina_Colada).
-any_cuisine(open_Bar).
 italian(bellini).
-american(cosmopolitan).
-any_cuisine(moscow_Mule).
+americans(cosmopolitan).
+european(cosmopolitan).
+american(moscow_Mule).
+european(moscow_Mule).
 mexican(tequila_Sunrise).
 mexican(tequila).
 spanish(sangria).
+european(tea).
+asian(tea).
+turkish(ayran).
 
+any_cuisine(salad).
+any_cuisine(soup).
 asian(loempia).
 italian(spaghetti_and_Meatballs).
 dutch(bitterballen).
 italian(bruschetta).
 asian(dumplings).
 italian(arancini).
-any_cuisine(salad).
-any_cuisine(soup).
-any_cuisine(cheese_Fondue).
+french(cheese_Fondue).
 indian(papadam).
 italian(carpaccio).
 french(escargot).
@@ -166,13 +179,19 @@ asian(tteokbokki).
 italian(tiramisu).
 american(brownies).
 asian(baklava).
-any_cuisine(cheesecake).
-any_cuisine(cupcakes).
-any_cuisine(pudding).
-any_cuisine(ice_Cream).
-any_cuisine(pie).
+american(cheesecake).
+european(cheesecake).
+american(cupcakes).
+european(cupcakes).
+americans(pudding).
+european(pudding).
+americans(ice_Cream).
+european(ice_Cream).
+americans(pie).
+european(pie).
 indian(gulab_Jamun).
-any_cuisine(chocolate_Fondue).
+american(chocolate_Fondue).
+european(chocolate_Fondue).
 german(rote_grutze).
 french(sweet_Crepes).
 german(kaiserschmarrn).
@@ -189,11 +208,16 @@ italian(gelato).
 asian(bingsu).
 japanese(dango).
 
-any_cuisine(chips).
-any_cuisine(cheese_and_Crackers).
-any_cuisine(nutsmix).
-any_cuisine(popcorn).
-any_cuisine(fries).
+american(chips).
+european(chips).
+american(cheese_and_Crackers).
+european(cheese_and_Crackers).
+american(nutsmix).
+european(nutsmix).
+american(popcorn).
+european(popcorn).
+american(fries).
+european(fries).
 japanese(takoyaki).
 indian(naan).
 turkish(borek).
