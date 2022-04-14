@@ -24,7 +24,7 @@ python3 -m uvicorn main:app --reload
 And then use your preferred browser to go to "*localhost:8000*"
 
 ## Notes
-1. Within the **ktp/backend/db** directory, there is a file (sort_kb.py) that combines all of the knowledge bases from the   **ktp/backend/db/sub_dbs** directory. We have already done this for you so there is no need to do so; however, in the python files root directory, excecute the following command to combine the knowledge base:
+1. Within the *ktp/backend/db* directory, there is a file (sort_kb.py) that combines all of the knowledge bases from the   *ktp/backend/db/sub_dbs* directory. We have already done this for you so there is no need to do so; however, in the python files root directory, excecute the following command to combine the knowledge base:
 ```
 python3 sort_kb.py
 ```
