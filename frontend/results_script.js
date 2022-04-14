@@ -123,6 +123,13 @@ function change_button() {
     document.getElementById("results").textContent = "Refresh Results";
 }
 
+// Changes the cuisine
+function change_cuisine() {
+    const cuisine = get_cuisine();
+    document.getElementById("cuisine").innerHTML = cuisine;
+    document.getElementById("cuisine").textContent = cuisine;
+}
+
 function get_buffet_choices(buffet) {
     switch (buffet) {
         case "get_together":
@@ -187,6 +194,18 @@ function get_vegan() {
     return vegan;
 }
 
+// Retrieves the cuisine info 
+function get_cuisine() {
+    const url = 'http://127.0.0.1:8000/app/query/cuisine';
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url, false ); // false for synchronous request
+    xmlHttp.send( null );
+    const data =  xmlHttp.responseText;
+    const parsedData = JSON.parse(data);
+    const cuisine = capitalizeFirstLetter(parsedData["Cuisine"]);
+
+    return cuisine;
+}
 // Returns if the food should be vegertarian or not
 function get_vegetarian() {
     const url = 'http://127.0.0.1:8000/app/query/vegetarian';

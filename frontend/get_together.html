@@ -15,9 +15,13 @@
         </header>
 
         <div class="form-group">
-            <button id="results" style = "background-color: rgb(99, 125, 125);" type="button" onclick="get_snack();get_main_dish();get_drink();change_button()">Reveal Menu</button>
+            <button id="results" style = "background-color: rgb(99, 125, 125);" type="button" onclick="get_snack();get_main_dish();get_drink();change_button();change_cuisine()">Reveal Menu</button>
             <script src="results_script.js"></script>
         </div>
+
+        <p style="text-align: center;">Your chosen cuisine is: </p>
+
+        <b><p id="cuisine" style="text-align: center;">X</p></b>
 
         <form id="survey-form" action="survey.html">
             <div class="form-group">
