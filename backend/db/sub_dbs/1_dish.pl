@@ -19,7 +19,6 @@ main_dish(fried_Rice).
 main_dish(schnitzel).
 main_dish(currywurst).
 main_dish(matjes).
-main_dish(buffet).
 main_dish(savory_Crepes).
 main_dish(spaghetti_Bolognese).
 main_dish(tandoori_Chicken).

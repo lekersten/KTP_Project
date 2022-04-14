@@ -89,15 +89,6 @@ function get_menu_item(item_str, vegan = false, vegetarian = false) {
         document.getElementById(item_str).textContent = checked_vegetarian;
         document.getElementById(item_str).href = "https://www.google.com/search?q=" + process_href(checked_vegetarian);
     
-    } else if (selected_item == "buffet") {
-        const path = window.location.pathname;
-        const page = path.split("/").pop();
-        const modifiedPage = page.substring(0, page.indexOf(".html"));
-        const buffet = get_buffet_choices(modifiedPage);
-        document.getElementById(item_str).innerHTML = buffet;
-        document.getElementById(item_str).textContent = buffet;
-        document.getElementById(item_str).href = "https://www.google.com/search?q=buffet";
-    
     } else {
         document.getElementById(item_str).innerHTML = selected_item;
         document.getElementById(item_str).textContent = selected_item;

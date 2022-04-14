@@ -28,7 +28,6 @@ all_meals(fried_Rice).
 dinner(schnitzel).
 lunch(currywurst).
 dinner(matjes).
-all_meals(buffet).
 dinner(savory_Crepes).
 lunch(spaghetti_Bolognese).
 dinner(spaghetti_Bolognese).

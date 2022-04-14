@@ -22,7 +22,6 @@ children(pad_Thai).
 children(fried_Rice).
 children(schnitzel).
 children(currywurst).
-children(buffet).
 children(ice_Cream).
 children(pie).
 children(chocolate_Fondue).

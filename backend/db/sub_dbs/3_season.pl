@@ -23,7 +23,6 @@ both_seasons(fried_Rice).
 both_seasons(schnitzel).
 both_seasons(currywurst).
 summer(matjes).
-both_seasons(buffet).
 both_seasons(savory_Crepes).
 both_seasons(spaghetti_Bolognese).
 winter(tandoori_Chicken).

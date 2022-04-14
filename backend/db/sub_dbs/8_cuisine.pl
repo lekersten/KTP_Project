@@ -48,7 +48,6 @@ mexican(enchilladas).
 japanese(ramen).
 japanese(sushi).
 
-any_cuisine(buffet).
 french(fondue).
 turkish(doner).
 asian(pad_Thai).

@@ -23,7 +23,6 @@ anywhere(fried_Rice).
 indoor(schnitzel).
 anywhere(currywurst).
 anywhere(matjes).
-anywhere(buffet).
 indoor(savory_Crepes).
 anywhere(spaghetti_Bolognese).
 anywhere(tandoori_Chicken).

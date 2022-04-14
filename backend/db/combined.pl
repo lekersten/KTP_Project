@@ -93,7 +93,6 @@
  main_dish(bLT).
  main_dish(barbecue_Ribs).
  main_dish(bratwurst).
- main_dish(buffet).
  main_dish(burger).
  main_dish(burrito).
  main_dish(butter_Chicken).
@@ -360,7 +359,6 @@
  party(borek).
  party(bratwurst).
  party(buffalo_Wings).
- party(buffet).
  party(champagne).
  party(cheese_and_Crackers).
  party(chips).
@@ -411,7 +409,6 @@
  both_seasons(brie).
  both_seasons(bruschetta).
  both_seasons(buffalo_Wings).
- both_seasons(buffet).
  both_seasons(burger).
  both_seasons(burrito).
  both_seasons(butter_Chicken).
@@ -591,7 +588,6 @@
  anywhere(brownies).
  anywhere(bruschetta).
  anywhere(buffalo_Wings).
- anywhere(buffet).
  anywhere(burger).
  anywhere(burrito).
  anywhere(butter_Chicken).
@@ -759,7 +755,6 @@
  all_meals(brie).
  all_meals(brownies).
  all_meals(buffalo_Wings).
- all_meals(buffet).
  all_meals(burrito).
  all_meals(caponata).
  all_meals(champagne).
@@ -962,7 +957,6 @@
  children(bratwurst).
  children(brownies).
  children(buffalo_Wings).
- children(buffet).
  children(burger).
  children(burrito).
  children(butter_Chicken).
@@ -1288,7 +1282,6 @@
  americans(pudding).
  americans(whiskey).
  any_cuisine(beer).
- any_cuisine(buffet).
  any_cuisine(cocktails).
  any_cuisine(mocktail).
  any_cuisine(open_Bar).

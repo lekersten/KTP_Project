@@ -21,7 +21,6 @@ party(stir_fry).
 get_together(schnitzel).
 party(currywurst).
 fancy(matjes).
-party(buffet).
 fancy(savory_Crepes).
 get_together(spaghetti_Bolognese).
 get_together(tandoori_Chicken).
