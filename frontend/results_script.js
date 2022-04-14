@@ -173,3 +173,4 @@ function capitalizeFirstLetter(string) {
 function process_menu_item(menu_item) {
     return capitalizeFirstLetter(menu_item.replace("_", " "));
 }
+

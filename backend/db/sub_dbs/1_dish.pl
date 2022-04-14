@@ -62,7 +62,7 @@ main_dish(fried_Chicken).
 main_dish(barbecue_Ribs).
 main_dish(maryland_Crabs).
 main_dish(deep_Dish_Pizza).
-main_dish(blt).
+main_dish(bLT).
 
 
 drink(wine).
@@ -152,8 +152,7 @@ dessert(cider_Donuts).
 dessert(fried_Dough).
 
 snacks(chips).
-snacks(crackers).
-snacks(peanuts).
+snacks(cheese_and_Crackers).
 snacks(nutsmix).
 snacks(popcorn).
 snacks(fries).

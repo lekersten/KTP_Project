@@ -58,7 +58,7 @@ function process_vegan_vegeterian() {
 function process_nuts() {
     const nuts = document.querySelector('input[name="nuts"]:checked').value;
 
-    if (nuts == "nuts") {
+    if (nuts == "nuts") { 
         add_query_parameter(nuts);
     }
 }

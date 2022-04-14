@@ -1,9 +1,5 @@
 % Where relation
 
-:- discontiguous indoor/1.
-:- discontiguous anywhere/1.
-:- discontiguous outdoor/1.
-
 outdoor(X) :- anywhere(X).
 indoor(X)  :- anywhere(X).
 
@@ -46,7 +42,7 @@ anywhere(fried_Chicken).
 anywhere(barbecue_Ribs).
 anywhere(maryland_Crabs).
 anywhere(deep_Dish_Pizza).
-anywhere(blt).
+anywhere(bLT).
 indoor(gnocchi).
 indoor(ravioli).
 anywhere(paella).
@@ -161,8 +157,7 @@ anywhere(bingsu).
 anywhere(dango).
 
 anywhere(chips).
-anywhere(crackers).
-anywhere(peanuts).
+anywhere(cheese_and_Crackers).
 anywhere(nutsmix).
 anywhere(popcorn).
 anywhere(fries).

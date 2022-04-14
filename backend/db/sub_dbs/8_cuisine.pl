@@ -1,16 +1,4 @@
 % Cuisine
-:- discontiguous italian/1.
-:- discontiguous asian/1.
-:- discontiguous indian/1.
-:- discontiguous spanish/1.
-:- discontiguous any_cuisine/1.
-:- discontiguous mexican/1.
-:- discontiguous japanese/1.
-:- discontiguous turkish/1.
-:- discontiguous american/1.
-:- discontiguous french/1.
-:- discontiguous spanish/1.
-:- discontiguous german/1.
 
 mexican(X)  :- any_cuisine(X).
 % mexican(X)  :- american(X).
@@ -81,14 +69,13 @@ german(bratwurst).
 german(cordon_Bleu).
 french(quiche_Lorraine).
 french(ratatouille).
-american(blt).
 american(mac_and_Cheese).
 american(hot_Dogs).
 american(fried_Chicken).
 american(barbecue_Ribs).
 american(maryland_Crabs).
 american(deep_Dish_Pizza).
-american(blt).
+american(bLT).
 italian(gnocchi).
 italian(ravioli).
 italian(paella).
@@ -203,8 +190,7 @@ asian(bingsu).
 japanese(dango).
 
 any_cuisine(chips).
-any_cuisine(crackers).
-any_cuisine(peanuts).
+any_cuisine(cheese_and_Crackers).
 any_cuisine(nutsmix).
 any_cuisine(popcorn).
 any_cuisine(fries).

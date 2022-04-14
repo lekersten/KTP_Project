@@ -1,8 +1,4 @@
 % Time (lunch_dinner_night)
-:- discontiguous lunch/1.
-:- discontiguous dinner/1.
-:- discontiguous night/1.
-:- discontiguous all_meals/1.
 
 lunch(X)  :- all_meals(X).
 dinner(X) :- all_meals(X).
@@ -62,7 +58,7 @@ dinner(fried_Chicken).
 dinner(barbecue_Ribs).
 dinner(maryland_Crabs).
 all_meals(deep_Dish_Pizza).
-lunch(blt).
+lunch(bLT).
 dinner(gnocchi).
 all_meals(ravioli).
 dinner(paella).
@@ -196,8 +192,7 @@ all_meals(bingsu).
 all_meals(dango).
 %
 all_meals(chips).
-all_meals(crackers).
-all_meals(peanuts).
+all_meals(cheese_and_Crackers).
 all_meals(nutsmix).
 all_meals(popcorn).
 all_meals(fries).

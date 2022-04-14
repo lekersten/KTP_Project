@@ -1,9 +1,5 @@
 % Season relations (winter includes fall, summer includes spring)
 
-:- discontiguous winter/1.
-:- discontiguous summer/1.
-:- discontiguous both_seasons/1.
-
 winter(X) :- both_seasons(X).
 summer(X) :- both_seasons(X).
 
@@ -72,7 +68,7 @@ both_seasons(fried_Chicken).
 summer(barbecue_Ribs).
 summer(maryland_Crabs).
 both_seasons(deep_Dish_Pizza).
-both_seasons(blt).
+both_seasons(bLT).
 
 both_seasons(wine).
 both_seasons(beer).
@@ -159,8 +155,7 @@ summer(bingsu).
 both_seasons(dango).
 
 both_seasons(chips).
-both_seasons(crackers).
-both_seasons(peanuts).
+both_seasons(cheese_and_Crackers).
 both_seasons(nutsmix).
 both_seasons(popcorn).
 both_seasons(fries).

@@ -87,8 +87,8 @@
  drink(tequila_Sunrise).
  drink(whiskey).
  drink(wine).
+ main_dish(bLT).
  main_dish(barbecue_Ribs).
- main_dish(blt).
  main_dish(bratwurst).
  main_dish(buffet).
  main_dish(burger).
@@ -153,22 +153,20 @@
  main_dish(vegetable_Curry).
  snacks(borek).
  snacks(buffalo_Wings).
+ snacks(cheese_and_Crackers).
  snacks(chips).
  snacks(chips_and_Guacamole).
  snacks(corn_Dogs).
- snacks(crackers).
  snacks(falafel).
  snacks(fries).
  snacks(mince_Borek).
  snacks(naan).
  snacks(nachos).
  snacks(nutsmix).
- snacks(onion_Rings). snacks(peanuts).
- snacks(popcorn).
+ snacks(onion_Rings). snacks(popcorn).
  snacks(samosas).
  snacks(spinach_and_Feta_Borek).
  snacks(takoyaki).
- 
  
  
  %
@@ -177,9 +175,6 @@
  %
  % Event type relations _ fancy, party, or get_together
  % appetizer(X) :- fancy(X)
- :- discontiguous fancy/1.
- :- discontiguous get_together/1.
- :- discontiguous party/1.
  fancy(arancini).
  fancy(baklava).
  fancy(banana_Split).
@@ -276,11 +271,11 @@
  fancy(vegetable_Curry).
  fancy(whiskey).
  fancy(wine).
+ get_together(bLT).
  get_together(barbecue_Ribs).
  get_together(beer).
  get_together(bellini).
  get_together(bloody_Mary).
- get_together(blt).
  get_together(bratwurst).
  get_together(buffalo_Wings).
  get_together(burger).
@@ -361,10 +356,10 @@
  party(buffalo_Wings).
  party(buffet).
  party(champagne).
+ party(cheese_and_Crackers).
  party(chips).
  party(cocktails).
  party(corn_Dogs).
- party(crackers).
  party(currywurst).
  party(fries).
  party(frikadellen).
@@ -377,7 +372,6 @@
  party(nutsmix).
  party(onion_Rings).
  party(open_Bar).
- party(peanuts).
  party(pina_Colada).
  party(pizza).
  party(popcorn).
@@ -396,19 +390,15 @@
  
  
  
- 
  % Season relations (winter includes fall, summer includes spring)
- :- discontiguous both_seasons/1.
- :- discontiguous summer/1.
- :- discontiguous winter/1.
  both_seasons(arancini).
+ both_seasons(bLT).
  both_seasons(baklava).
  both_seasons(baquette_with_Spread).
  both_seasons(beer).
  both_seasons(bellini).
  both_seasons(bitterballen).
  both_seasons(bloody_Mary).
- both_seasons(blt).
  both_seasons(borek).
  both_seasons(bratwurst).
  both_seasons(brie).
@@ -422,6 +412,7 @@
  both_seasons(caponata).
  both_seasons(champagne).
  both_seasons(charcuterie).
+ both_seasons(cheese_and_Crackers).
  both_seasons(chicken).
  both_seasons(chips).
  both_seasons(chips_and_Guacamole).
@@ -432,7 +423,6 @@
  both_seasons(cocktails).
  both_seasons(cordon_Bleu).
  both_seasons(cosmopolitan).
- both_seasons(crackers).
  both_seasons(cupcakes).
  both_seasons(currywurst).
  both_seasons(dango).
@@ -475,7 +465,6 @@
  both_seasons(open_Bar).
  both_seasons(pad_Thai).
  both_seasons(papadam).
- both_seasons(peanuts).
  both_seasons(pie).
  both_seasons(pizza).
  both_seasons(popcorn).
@@ -574,12 +563,9 @@
  
  
  
- 
  % Where relation
- :- discontiguous anywhere/1.
- :- discontiguous indoor/1.
- :- discontiguous outdoor/1.
  anywhere(arancini).
+ anywhere(bLT).
  anywhere(baklava).
  anywhere(banana_Split).
  anywhere(baquette_with_Spread).
@@ -589,7 +575,6 @@
  anywhere(bingsu).
  anywhere(bitterballen).
  anywhere(bloody_Mary).
- anywhere(blt).
  anywhere(borek).
  anywhere(bratwurst).
  anywhere(brie).
@@ -604,6 +589,7 @@
  anywhere(carpaccio).
  anywhere(champagne).
  anywhere(charcuterie).
+ anywhere(cheese_and_Crackers).
  anywhere(cheesecake).
  anywhere(chips).
  anywhere(chips_and_Guacamole).
@@ -616,7 +602,6 @@
  anywhere(cordon_Bleu).
  anywhere(corn_Dogs).
  anywhere(cosmopolitan).
- anywhere(crackers).
  anywhere(creme_Brulee).
  anywhere(cupcakes).
  anywhere(currywurst).
@@ -672,7 +657,6 @@
  anywhere(open_Bar).
  anywhere(paella).
  anywhere(papadam).
- anywhere(peanuts).
  anywhere(pie).
  anywhere(pina_Colada).
  anywhere(pizza).
@@ -754,10 +738,6 @@
  %
  %
  % Time (lunch_dinner_night)
- :- discontiguous all_meals/1.
- :- discontiguous dinner/1.
- :- discontiguous lunch/1.
- :- discontiguous night/1.
  all_meals(all_meals).
  all_meals(baklava).
  all_meals(banana_Split).
@@ -773,6 +753,7 @@
  all_meals(caponata).
  all_meals(champagne).
  all_meals(charcuterie).
+ all_meals(cheese_and_Crackers).
  all_meals(cheesecake).
  all_meals(chili).
  all_meals(chips).
@@ -781,7 +762,6 @@
  all_meals(churros).
  all_meals(cider_Donuts).
  all_meals(cosmopolitan).
- all_meals(crackers).
  all_meals(creme_Brulee).
  all_meals(cupcakes).
  all_meals(dango).
@@ -819,7 +799,6 @@
  all_meals(onion_Rings).
  all_meals(open_Bar).
  all_meals(pad_Thai).
- all_meals(peanuts).
  all_meals(pie).
  all_meals(pina_Colada).
  all_meals(pizza).
@@ -906,10 +885,10 @@
  dinner(wine).
  lunch(X)  :- all_meals(X).
  lunch(arancini).
+ lunch(bLT).
  lunch(bellini).
  lunch(bitterballen).
  lunch(bloody_Mary).
- lunch(blt).
  lunch(bratwurst).
  lunch(bruschetta).
  lunch(burger).
@@ -961,12 +940,12 @@
  night(whiskey).
  night(wine).
  % Children existence relations
+ children(bLT).
  children(baklava).
  children(banana_Split).
  children(baquette_with_Spread).
  children(barbecue_Ribs).
  children(bingsu).
- children(blt).
  children(borek).
  children(bratwurst).
  children(brownies).
@@ -975,6 +954,7 @@
  children(burger).
  children(burrito).
  children(butter_Chicken).
+ children(cheese_and_Crackers).
  children(cheesecake).
  children(chicken).
  children(chips).
@@ -985,7 +965,6 @@
  children(clam_Chowder).
  children(cordon_Bleu).
  children(corn_Dogs).
- children(crackers).
  children(creme_Brulee).
  children(cupcakes).
  children(currywurst).
@@ -1022,7 +1001,6 @@
  children(onion_Rings).
  children(onion_soup).
  children(pad_Thai).
- children(peanuts).
  children(pie).
  children(pizza).
  children(popcorn).
@@ -1052,13 +1030,7 @@
  
  
  
- 
  % Vegan / Vegetarian / Dairy_free / nut allergy / none
- :- discontiguous dairy/1.
- :- discontiguous none/1.
- :- discontiguous nuts/1.
- :- discontiguous vegan/1.
- :- discontiguous vegetarian/1.
  dairy(X)      :- appetizers(X).
  dairy(X)      :- drink(X), dif(X, mango_Lassi).
  dairy(X)      :- snacks(X).
@@ -1107,11 +1079,11 @@
  nuts(X)       :- dessert(X).
  nuts(X)       :- drink(X).
  nuts(X)       :- snacks(X), dif(X, nutsmix).
+ nuts(bLT).
  nuts(banana_Split).
  nuts(baquette_with_Spread).
  nuts(barbecue_Ribs).
  nuts(bingsu).
- nuts(blt).
  nuts(bratwurst).
  nuts(brie).
  nuts(buffalo_Wings).
@@ -1180,7 +1152,7 @@
  vegan(X)      :- drink(X).
  vegan(bruschetta).
  vegan(caponata).
- vegan(crackers).
+ vegan(cheese_and_Crackers).
  vegan(cupcakes).
  vegan(dango).
  vegan(falafel).
@@ -1190,7 +1162,6 @@
  vegan(lentil_soup).
  vegan(miso_Soup).
  vegan(nutsmix).
- vegan(peanuts).
  vegan(popcorn).
  vegan(ratatouille).
  vegan(stuffed_Leaves).
@@ -1257,23 +1228,10 @@
  % Cuisine
  % mexican(X)  :- american(X).
  % spanish(X)  :- italian(X).   
- :- discontiguous american/1.
- :- discontiguous any_cuisine/1.
- :- discontiguous asian/1.
- :- discontiguous french/1.
- :- discontiguous german/1.
- :- discontiguous indian/1.
- :- discontiguous italian/1.
- :- discontiguous japanese/1.
- :- discontiguous mexican/1.
- :- discontiguous spanish/1.
- :- discontiguous spanish/1.
- :- discontiguous turkish/1.
  american(X) :- any_cuisine(X).
+ american(bLT).
  american(banana_Split).
  american(barbecue_Ribs).
- american(blt).
- american(blt).
  american(brownies).
  american(buffalo_Wings).
  american(burger).
@@ -1295,12 +1253,12 @@
  any_cuisine(buffet).
  any_cuisine(champagne).
  any_cuisine(cheese_Fondue).
+ any_cuisine(cheese_and_Crackers).
  any_cuisine(cheesecake).
  any_cuisine(chicken).
  any_cuisine(chips).
  any_cuisine(chocolate_Fondue).
  any_cuisine(cocktails).
- any_cuisine(crackers).
  any_cuisine(cupcakes).
  any_cuisine(fondue).
  any_cuisine(fries).
@@ -1312,7 +1270,6 @@
  any_cuisine(moscow_Mule).
  any_cuisine(nutsmix).
  any_cuisine(open_Bar).
- any_cuisine(peanuts).
  any_cuisine(pie).
  any_cuisine(popcorn).
  any_cuisine(pudding).

@@ -1,11 +1,5 @@
 % Vegan / Vegetarian / Dairy_free / nut allergy / none
 
-:- discontiguous nuts/1.
-:- discontiguous vegan/1.
-:- discontiguous vegetarian/1.
-:- discontiguous dairy/1.
-:- discontiguous none/1.
-
 vegan(X)      :- drink(X).
 vegetarian(X) :- drink(X).
 dairy(X)      :- drink(X), dif(X, mango_Lassi).
@@ -17,8 +11,7 @@ nuts(X)       :- dessert(X).
 nuts(X)       :- snacks(X), dif(X, nutsmix).
 vegetarian(X) :- vegan(X).
 
-vegan(crackers).
-vegan(peanuts).
+vegan(cheese_and_Crackers).
 vegan(nutsmix).
 vegan(popcorn).
 vegan(tacos).
@@ -165,7 +158,7 @@ nuts(fried_Chicken).
 nuts(barbecue_Ribs).
 nuts(maryland_Crabs).
 nuts(deep_Dish_Pizza).
-nuts(blt).
+nuts(bLT).
 nuts(paella).
 nuts(calzone).
 nuts(tamales).

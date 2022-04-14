@@ -14,8 +14,7 @@ children(cheesecake).
 children(cupcakes).
 children(pudding).
 children(chips).
-children(crackers).
-children(peanuts).
+children(cheese_and_Crackers).
 children(nutsmix).
 children(popcorn).
 children(enchilladas).
@@ -63,7 +62,7 @@ children(hot_Dogs).
 children(fried_Chicken).
 children(barbecue_Ribs).
 children(deep_Dish_Pizza).
-children(blt).
+children(bLT).
 children(ravioli).
 children(tortellini).
 children(quesadilla).

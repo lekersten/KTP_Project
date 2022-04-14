@@ -1,9 +1,5 @@
 % Event type relations _ fancy, party, or get_together
 
-:- discontiguous get_together/1.
-:- discontiguous fancy/1.
-:- discontiguous party/1.
-
 get_together(tacos).
 party(tacos).
 get_together(enchilladas).
@@ -87,7 +83,7 @@ get_together(fried_Chicken).
 get_together(barbecue_Ribs).
 fancy(maryland_Crabs).
 get_together(deep_Dish_Pizza).
-get_together(blt).
+get_together(bLT).
 %
 fancy(wine).
 party(wine).
@@ -196,8 +192,7 @@ fancy(cider_Donuts).
 fancy(fried_Dough).
 %
 party(chips).
-party(crackers).
-party(peanuts).
+party(cheese_and_Crackers).
 party(nutsmix).
 party(popcorn).
 party(fries).
