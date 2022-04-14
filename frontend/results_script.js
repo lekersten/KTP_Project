@@ -81,7 +81,7 @@ function get_menu_item(item_str, vegan = false, vegetarian = false) {
 
 // Processes the Google search query for href
 function process_href(menu_item) {
-    return menu_item.replace(" ", "+");
+    return menu_item.replaceAll(" ", "+");
 }
 
 // Changes the "See Results/Refresh Results" Button
@@ -174,6 +174,6 @@ function capitalizeFirstLetter(string) {
 
 // Processes the menu items before display
 function process_menu_item(menu_item) {
-    return capitalizeFirstLetter(menu_item.replace("_", " "));
+    return capitalizeFirstLetter(menu_item.replaceAll("_", " "));
 }
 
