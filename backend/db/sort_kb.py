@@ -9,7 +9,7 @@ dir = os.getcwd() + r"/sub_dbs"
 for item in os.listdir(os.chdir(dir)):
     with open(item, 'r') as r:
         for line in sorted(r):
-            f.write(line)       # write into combined kb
+            f.write(line + ' ')       # write into combined kb
             
 f.close()
 

@@ -1,5 +1,4 @@
 % Dish Type (Either Main, Snack, App., Drink)
-
 main_dish(tacos).
 main_dish(burger).
 main_dish(risotto).

@@ -40,11 +40,11 @@ h2 {
     font-family: Optima, sans-serif;
 }
 
-p {
-    style = "text-align: center";
-}
+/* p {
+    style = "text-align: center;";
+} */
 
-# bye {
+#bye {
     font-size: 15px;
 }
 
@@ -175,6 +175,7 @@ select {
 }
 
 button {
+    cursor: pointer;
     width: 100%;
     display: block;
     height: 40px;
